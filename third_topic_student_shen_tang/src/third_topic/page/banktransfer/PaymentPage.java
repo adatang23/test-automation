@@ -10,6 +10,7 @@ public class PaymentPage extends PaymentPageBase {
     public String getPaymentName() {
         return paymentName;
     }
+
     public void setPaymentName(String paymentName) {
         this.paymentName = paymentName;
     }
@@ -17,11 +18,9 @@ public class PaymentPage extends PaymentPageBase {
     public double getTotalSaving() {
         return totalSaving;
     }
-
     public void setTotalSaving(double totalSaving) {
         this.totalSaving = totalSaving;
     }
-
 
     // Inheritance and Polymorphism
     @Override

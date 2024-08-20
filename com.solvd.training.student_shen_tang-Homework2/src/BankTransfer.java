@@ -7,7 +7,7 @@ public class BankTransfer extends Payment {
         this.bankName = bankName;
     }
 
-    public String getBankName() { return this.bankName; }
+    public String getBankName() { return bankName; }
 
     @Override
     public String toString() { return "The user with an ID of " + getUserId()

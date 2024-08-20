@@ -7,7 +7,7 @@ public class DigitalWalletPay extends Payment {
         this.brand = brand;
     }
 
-    public String getBrand() { return this.brand; }
+    public String getBrand() { return brand; }
 
     @Override
     public String toString() { return "The user with an ID of " + getUserId()

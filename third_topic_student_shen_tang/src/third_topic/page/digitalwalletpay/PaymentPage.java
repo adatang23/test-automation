@@ -1,5 +1,4 @@
 package third_topic.page.digitalwalletpay;
-
 import third_topic.page.common.PaymentPageBase;
 
 public class PaymentPage extends PaymentPageBase {
@@ -10,15 +9,12 @@ public class PaymentPage extends PaymentPageBase {
     public String getPaymentName() {
         return paymentName;
     }
-
     public void setPaymentName(String paymentName) {
         this.paymentName = paymentName;
     }
-
     public double getTotalCredit() {
         return totalCredit;
     }
-
     public void setTotalCredit(double totalCredit) {
         this.totalCredit = totalCredit;
     }
@@ -28,7 +24,6 @@ public class PaymentPage extends PaymentPageBase {
     public void openPage() {
         System.out.println("Opening Payment Page of Digital Wallet Pay");
     }
-
     @Override
     public void addBillToPayment(String billName, double price) {
         if (totalCredit - price >= 0) {

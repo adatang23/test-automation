@@ -1,7 +1,5 @@
 package third_topic.page.creditcardpay;
-
 import third_topic.page.common.PaymentPageBase;
-
 public class PaymentPage extends PaymentPageBase {
     private String paymentName;
     private double totalCredit = 3000.0;
@@ -10,11 +8,9 @@ public class PaymentPage extends PaymentPageBase {
     public String getPaymentName() {
         return paymentName;
     }
-
     public void setPaymentName(String paymentName) {
         this.paymentName = paymentName;
     }
-
     public double getTotalCredit() {
         return totalCredit;
     }

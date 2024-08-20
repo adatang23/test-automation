@@ -7,7 +7,7 @@ public class CreditCardPay extends Payment {
         this.cardNumber = cardNumber;
     }
 
-    public String getCardNumber() { return this.cardNumber; }
+    public String getCardNumber() { return cardNumber; }
 
     @Override
     public String toString() { return "The user with an ID of " + getUserId()

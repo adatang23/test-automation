@@ -1,0 +1,40 @@
+2024-08-24 00:14:21,448 ERROR o.e.PaymentSystems [main] Invalid payment ID: 1 2 3 4 5, alphanumeric only.
+2024-08-24 00:14:21,452 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment id: Invalid payment ID: 1 2 3 4 5 (invalid character)
+2024-08-24 00:17:28,411 ERROR o.e.PaymentSystems [main] Invalid payment ID: 1 2 3 4 5, alphanumeric only.
+2024-08-24 00:17:28,414 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment id: Invalid payment ID: 1 2 3 4 5 (invalid character)
+2024-08-25 20:09:59,844 ERROR o.e.PaymentSystems [main] Invalid payment ID: 1 2 3 4 5, alphanumeric only.
+2024-08-25 20:09:59,846 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment id: Invalid payment ID: 1 2 3 4 5 (invalid character)
+2024-08-25 20:09:59,847 ERROR o.e.PaymentSystems [main] Payment is not existed.
+2024-08-25 20:09:59,847 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment: Can't find the payment, try an existed one.
+2024-08-25 20:09:59,851 FATAL o.e.PaymentSystems [main] Can't find the payment file:  (No such file or directory)
+2024-08-25 20:28:21,480 FATAL o.e.PaymentSystems [main] This is the fatal level.
+2024-08-25 20:28:21,483 ERROR o.e.PaymentSystems [main] This is the error level.
+2024-08-25 20:28:21,483 WARN o.e.PaymentSystems [main] This is the warn level.
+2024-08-25 20:28:21,483 INFO o.e.PaymentSystems [main] This is the info level.
+2024-08-25 20:28:21,483 DEBUG o.e.PaymentSystems [main] This is the debug level.
+2024-08-25 20:28:21,483 TRACE o.e.PaymentSystems [main] This is the trace level.
+2024-08-25 20:28:21,483 ERROR o.e.PaymentSystems [main] Invalid payment ID: 1 2 3 4 5, alphanumeric only.
+2024-08-25 20:28:21,483 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment id: Invalid payment ID: 1 2 3 4 5 (invalid character)
+2024-08-25 20:28:21,484 ERROR o.e.PaymentSystems [main] Payment is not existed.
+2024-08-25 20:28:21,484 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment: Can't find the payment, try an existed one.
+2024-08-25 20:28:21,487 FATAL o.e.PaymentSystems [main] Can't find the payment file:  (No such file or directory)
+2024-08-25 20:32:24,716 ERROR o.e.PaymentSystems [main] Invalid payment ID: 1 2 3 4 5, alphanumeric only.
+2024-08-25 20:32:24,717 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment id: Invalid payment ID: 1 2 3 4 5 (invalid character)
+2024-08-25 20:32:24,718 ERROR o.e.PaymentSystems [main] Payment is not existed.
+2024-08-25 20:32:24,719 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment: Can't find the payment, try an existed one.
+2024-08-25 20:32:24,722 FATAL o.e.PaymentSystems [main] Can't find the payment file:  (No such file or directory)
+2024-08-25 20:36:37,907 ERROR o.e.PaymentSystems [main] Invalid payment ID: 1 2 3 4 5, alphanumeric only.
+2024-08-25 20:36:37,910 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment id: Invalid payment ID: 1 2 3 4 5 (invalid character)
+2024-08-25 20:36:37,910 ERROR o.e.PaymentSystems [main] Payment is not existed.
+2024-08-25 20:36:37,910 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment: Can't find the payment, try an existed one.
+2024-08-25 20:36:37,916 FATAL o.e.PaymentSystems [main] Can't find the payment file:  (No such file or directory)
+2024-08-25 20:37:50,991 ERROR o.e.PaymentSystems [main] Invalid payment ID: 1 2 3 4 5, alphanumeric only.
+2024-08-25 20:37:50,993 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment id: Invalid payment ID: 1 2 3 4 5 (invalid character)
+2024-08-25 20:37:50,994 ERROR o.e.PaymentSystems [main] Payment is not existed.
+2024-08-25 20:37:50,994 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment: Can't find the payment, try an existed one.
+2024-08-25 20:37:50,997 FATAL o.e.PaymentSystems [main] Can't find the payment file:  (No such file or directory)
+2024-08-25 20:38:42,624 ERROR o.e.PaymentSystems [main] Invalid payment ID: 1 2 3 45, alphanumeric only.
+2024-08-25 20:38:42,626 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment id: Invalid payment ID: 1 2 3 45 (invalid character)
+2024-08-25 20:38:42,627 ERROR o.e.PaymentSystems [main] Payment is not existed.
+2024-08-25 20:38:42,627 FATAL o.e.PaymentSystems [main] Error retrieving invalid payment: Can't find the payment, try an existed one.
+2024-08-25 20:38:42,630 FATAL o.e.PaymentSystems [main] Can't find the payment file:  (No such file or directory)

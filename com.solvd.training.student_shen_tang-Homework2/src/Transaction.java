@@ -10,12 +10,19 @@ public class Transaction {
         this.price = price;
     }
 
-    public String getTransactionId() { return transactionId; }
-    public double getPrice() { return price; }
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 
     @Override
-    public String toString() { return "The transaction with an ID of " + transactionId
-            + " has a price of $" + price + "."; }
+    public String toString() {
+        return "The transaction with an ID of " + transactionId
+                + " has a price of $" + price + ".";
+    }
 
     @Override
     public int hashCode() {
@@ -30,8 +37,8 @@ public class Transaction {
             return false;
         } else {
             Transaction transaction = (Transaction) obj;
-            return (transaction.getTransactionId().equals(this.getTransactionId()) &&
-                    transaction.price == this.price);
+            return (transaction.getTransactionId().equals(this.getTransactionId())
+                    && transaction.price == this.price);
         }
     }
 }

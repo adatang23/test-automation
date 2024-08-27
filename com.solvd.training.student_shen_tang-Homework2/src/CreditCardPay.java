@@ -7,12 +7,17 @@ public class CreditCardPay extends Payment {
         this.cardNumber = cardNumber;
     }
 
-    public final String getCardNumber() { return cardNumber; }
+    public final String getCardNumber() {
+        return cardNumber;
+    }
 
     @Override
-    public String toString() { return "The user with an ID of " + getUserId()
-            + " paid $" + getPrice() + " by a credit card with the card number "
-            + cardNumber + " on " + getDate() + ".";}
+    public String toString() {
+        return "The user with an ID of " + getUserId()
+                + " paid $" + getPrice()
+                + " by a credit card with the card number " + cardNumber
+                + " on " + getDate() + ".";
+    }
 
     @Override
     public int hashCode() {
@@ -27,10 +32,10 @@ public class CreditCardPay extends Payment {
             return false;
         } else {
             CreditCardPay creditCardPay = (CreditCardPay) obj;
-            return (creditCardPay.getUserId().equals(this.getUserId()) &&
-                    creditCardPay.getDate().equals(this.getDate()) &&
-                    creditCardPay.getPrice() == this.getPrice() &&
-                    creditCardPay.cardNumber.equals(this.cardNumber));
+            return (creditCardPay.getUserId().equals(this.getUserId())
+                    && creditCardPay.getDate().equals(this.getDate())
+                    && creditCardPay.getPrice() == this.getPrice()
+                    && creditCardPay.cardNumber.equals(this.cardNumber));
         }
     }
 }

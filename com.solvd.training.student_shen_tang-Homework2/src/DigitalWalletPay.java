@@ -7,12 +7,17 @@ public class DigitalWalletPay extends Payment {
         this.brand = brand;
     }
 
-    public final String getBrand() { return brand; }
+    public final String getBrand() {
+        return brand;
+    }
 
     @Override
-    public String toString() { return "The user with an ID of " + getUserId()
-            + " paid $" + getPrice() + " through the digital wallet of "
-            + brand + " on " + getDate() + "."; }
+    public String toString() {
+        return "The user with an ID of " + getUserId()
+                + " paid $" + getPrice()
+                + " through the digital wallet of " + brand
+                + " on " + getDate() + ".";
+    }
 
     @Override
     public int hashCode() {
@@ -27,10 +32,10 @@ public class DigitalWalletPay extends Payment {
             return false;
         } else {
             DigitalWalletPay digitalWalletPay = (DigitalWalletPay) obj;
-            return (digitalWalletPay.getUserId().equals(this.getUserId()) &&
-                    digitalWalletPay.getDate().equals(this.getDate()) &&
-                    digitalWalletPay.getPrice() == this.getPrice() &&
-                    digitalWalletPay.brand.equals(this.brand));
+            return (digitalWalletPay.getUserId().equals(this.getUserId())
+                    && digitalWalletPay.getDate().equals(this.getDate())
+                    && digitalWalletPay.getPrice() == this.getPrice()
+                    && digitalWalletPay.brand.equals(this.brand));
         }
     }
 }

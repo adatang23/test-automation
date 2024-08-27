@@ -2,16 +2,22 @@ import java.util.Objects;
 
 public class RefundTransaction extends Transaction {
     private String customerId;
+
     public RefundTransaction(String transactionId, double price, String customerId) {
         super(transactionId, price);
         this.customerId = customerId;
     }
 
-    public String getCustomerId() { return customerId; }
+    public String getCustomerId() {
+        return customerId;
+    }
 
     @Override
-    public String toString() { return "The refund transaction with an ID of " + getTransactionId()
-            + " transferred $" + getPrice() + " to the customer with an ID of " + customerId + "."; }
+    public String toString() {
+        return "The refund transaction with an ID of " + getTransactionId()
+                + " transferred $" + getPrice()
+                + " to the customer with an ID of " + customerId + ".";
+    }
 
     @Override
     public int hashCode() {
@@ -26,9 +32,9 @@ public class RefundTransaction extends Transaction {
             return false;
         } else {
             RefundTransaction refundTransaction = (RefundTransaction) obj;
-            return (refundTransaction.getTransactionId().equals(this.getTransactionId()) &&
-                    refundTransaction.getPrice() == this.getPrice() &&
-                    refundTransaction.customerId.equals(this.customerId));
+            return (refundTransaction.getTransactionId().equals(this.getTransactionId())
+                    && refundTransaction.getPrice() == this.getPrice()
+                    && refundTransaction.customerId.equals(this.customerId));
         }
     }
 }

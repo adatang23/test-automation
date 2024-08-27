@@ -11,17 +11,25 @@ public class Admin extends User {
         this.userList = userList;
     }
 
-    public String[] getTransactionList() { return transactionList; }
-    public String[] getUserList() { return userList; }
+    public String[] getTransactionList() {
+        return transactionList;
+    }
+
+    public String[] getUserList() {
+        return userList;
+    }
 
     @Override
-    public String toString() { return "The admin with an ID of " + getUserId()
-            + " has a transaction list " + Arrays.toString(transactionList)
-            + ", and a user list" + Arrays.toString(userList) + "."; }
+    public String toString() {
+        return "The admin with an ID of " + getUserId()
+                + " has a transaction list " + Arrays.toString(transactionList)
+                + ", and a user list" + Arrays.toString(userList) + ".";
+    }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getUserId(), getPassword(), Arrays.toString(getTransactionList()), Arrays.toString(getUserList()));
+        return Objects.hash(getUserId(), getPassword(), Arrays.toString(getTransactionList()),
+                Arrays.toString(getUserList()));
     }
 
     @Override
@@ -32,10 +40,10 @@ public class Admin extends User {
             return false;
         } else {
             Admin admin = (Admin) obj;
-            return (admin.getUserId().equals(this.getUserId()) &&
-                    admin.getPassword().equals(this.getPassword()) &&
-                    Arrays.equals(admin.transactionList, this.transactionList) &&
-                    Arrays.equals(admin.userList, this.userList));
+            return (admin.getUserId().equals(this.getUserId())
+                    && admin.getPassword().equals(this.getPassword())
+                    && Arrays.equals(admin.transactionList, this.transactionList)
+                    && Arrays.equals(admin.userList, this.userList));
         }
     }
 }

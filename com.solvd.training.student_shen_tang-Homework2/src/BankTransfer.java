@@ -7,12 +7,17 @@ public class BankTransfer extends Payment {
         this.bankName = bankName;
     }
 
-    public final String getBankName() { return bankName; }
+    public final String getBankName() {
+        return bankName;
+    }
 
     @Override
-    public String toString() { return "The user with an ID of " + getUserId()
-             + " paid $" + getPrice() + " through " + bankName + " bank transfer on "
-            + getDate() + ".";}
+    public String toString() {
+        return "The user with an ID of " + getUserId()
+                + " paid $" + getPrice()
+                + " through " + bankName
+                + " bank transfer on " + getDate() + ".";
+    }
 
     @Override
     public int hashCode() {
@@ -27,10 +32,10 @@ public class BankTransfer extends Payment {
             return false;
         } else {
             BankTransfer bankTransfer = (BankTransfer) obj;
-            return (bankTransfer.getUserId().equals(this.getUserId()) &&
-                    bankTransfer.getDate().equals(this.getDate()) &&
-                    bankTransfer.getPrice() == this.getPrice() &&
-                    bankTransfer.bankName.equals(this.bankName));
+            return (bankTransfer.getUserId().equals(this.getUserId())
+                    && bankTransfer.getDate().equals(this.getDate())
+                    && bankTransfer.getPrice() == this.getPrice()
+                    && bankTransfer.bankName.equals(this.bankName));
         }
     }
 }

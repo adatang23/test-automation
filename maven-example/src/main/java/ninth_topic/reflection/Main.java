@@ -2,38 +2,30 @@ package ninth_topic.reflection;
 import ninth_topic.enums.UserType;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
 
 
 public class Main {
 
     // Please find the reflection implementation at ninth_topic/enums/TransactionList.java
-
-    private static Map<String, String> CONFIG = new HashMap<>();
-
     @BeforeMethod(alwaysRun = true)
     public void setupConfiguration(Method method) {
         try {
             String envString = "QA"; // Assume "QA" is our environment
-            CONFIG.put("env", envString);
             System.out.println("Environment is: " + envString);
 
             // Dynamically configure based on the method name
             String methodName = method.getName();
+            String testType = "Default";
             if (methodName.contains("Chrome")) {
-                CONFIG.put("browser", "Chrome");
-            } else if (methodName.contains("Firefox")) {
-                CONFIG.put("browser", "Firefox");
-            } else {
-                CONFIG.put("browser", "DefaultBrowser");
+                testType = "Chrome";
+            } else if (methodName.contains("FireFox")) {
+                testType = "FireFox";
+            } else if (methodName.contains("Safari")) {
+                testType = "Safari";
             }
-
-            // Log the selected configuration
-            System.out.println("Setting up test: " + methodName);
-            System.out.println("Configured browser: " + CONFIG.get("browser"));
+            System.out.println("Setting up test: " + methodName + "\n"
+                    + "It is a " + testType + " test.");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -47,9 +39,5 @@ public class Main {
         String[] cust = customInfor.split("_");
         UserType customType = UserType.findByUserType(cust[0]);
         System.out.println(customType + "\n");
-    }
-
-    public static void main(String[] args) {
-
     }
 }

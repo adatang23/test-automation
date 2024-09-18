@@ -1,7 +1,12 @@
 package ninth_topic.enums;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Type;
+import java.util.Arrays;
+
 public class Transaction {
-    private TransactionMethod transactionMethod;
+    public TransactionMethod transactionMethod;
     private double price;
 
 
@@ -57,6 +62,32 @@ public class Transaction {
             case CHECK_METHOD:
                 System.out.println(toString() + "\nThe price is $" + price);
                 break;
+        }
+    }
+
+    public static void main(String...args) {
+        try {
+            // call methods by parameters
+            Class<?> c = Class.forName(args[0]);
+            Field f = c.getField(args[1]);
+            System.out.format("Type: %s%n", f.getType());
+            System.out.format("GenericType: %s%n", f.getGenericType());
+            System.out.println("");
+
+            // Using Reflection extract information about Constructors
+            System.out.println("Using reflection extract information about constructors:");
+            Constructor[] allConstructors = Transaction.class.getDeclaredConstructors();
+            for (Constructor constructor : allConstructors) {
+                Class<?>[] pType = constructor.getParameterTypes();
+                Type[] gpType = constructor.getGenericParameterTypes();
+                System.out.println("Parameter Types: " + Arrays.stream(pType).toList() + "\n"
+                        + "Generic Parameter Types: " + Arrays.stream(gpType).toList() + "\n");
+            }
+
+        } catch (ClassNotFoundException x) {
+            x.printStackTrace();
+        } catch (NoSuchFieldException x) {
+            x.printStackTrace();
         }
     }
 }

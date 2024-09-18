@@ -18,7 +18,6 @@ public enum TransactionMethod {
 
     private final String type;
 
-
     TransactionMethod(String type) {
         this.type = type;
     }

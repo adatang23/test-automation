@@ -1,14 +1,11 @@
 package ninth_topic.enums;
 
-import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import java.lang.reflect.Method;
 
 public class TransactionList {
     public TransactionMethod transactionMethod;
@@ -32,7 +29,7 @@ public class TransactionList {
         return ans;
     }
 
-    public String getTransactionNameNull() {
+    public String getTransactionNameNull() throws NullPointerException {
         try {
             return transactionNameNull;
         } catch (NullPointerException e) {
@@ -64,6 +61,7 @@ public class TransactionList {
             printMessage.invoke(newTransactionList, "hello");
 
             // Using Reflection extract information about Fields
+            // name, type, modifier
             System.out.println("Using reflection extract information about fields:");
             Field[] flds = TransactionList.class.getDeclaredFields();
             for (Field field : flds) {
@@ -78,26 +76,50 @@ public class TransactionList {
             }
             System.out.println("");
 
+
+            // Using Reflection extract information about Constructors
+            // Please Check the Reflection extract information about Constructors
+            // at ninth_topic/enums/Transaction
+            System.out.println("Using reflection extract information about constructors:");
+            Constructor[] allConstructors = TransactionList.class.getDeclaredConstructors();
+            for (Constructor constructor: allConstructors) {
+                Class<?>[] pType = constructor.getParameterTypes();
+                Type[] gpType = constructor.getGenericParameterTypes();
+                System.out.println("Parameter Types: " + Arrays.stream(pType).toList() + "\n"
+                        + "Generic Parameter Types: "+ Arrays.stream(gpType).toList() + "\n");
+            }
+
+
             // Using Reflection extract information about Methods
+            // name, modifiers, return types, parameters
             System.out.println("Using reflection extract information about methods:");
             Method[] methods = TransactionList.class.getDeclaredMethods();
             for (Method method: methods) {
                 String name = method.getName();
+                int mod = method.getModifiers();
                 Object type = method.getReturnType();
                 Object genericType = method.getGenericReturnType();
-                Object exceptionType = method.getExceptionTypes();
-                Object genericExceptionType = method.getGenericExceptionTypes();
-                int mod = method.getModifiers();
+                Class<?>[] pType = method.getParameterTypes();
+                Type[] gpType = method.getGenericParameterTypes();
+                Class<?>[] exceptionType = method.getExceptionTypes();
+                Type[] genericExceptionType = method.getGenericExceptionTypes();
                 System.out.println("Name: " + name + "\n"
-                        + "Type: " + String.valueOf(type) + "\n"
-                        + "Generic Type: " + String.valueOf(genericType) + "\n"
-                        + "Exception Type: " + String.valueOf(exceptionType) + "\n"
-                        + "Generic Exception Type: " + String.valueOf(genericExceptionType) + "\n");
+                        + "Modifier: " + Modifier.toString(mod) + "\n"
+                        + "Return Type: " + String.valueOf(type) + "\n"
+                        + "Generic Return Type: " + String.valueOf(genericType) + "\n"
+                        + "Parameter Types: " + Arrays.stream(pType).toList() + "\n"
+                        + "Generic Parameter Types: " + Arrays.stream(gpType).toList() + "\n"
+                        + "Exception Type: " + Arrays.stream(exceptionType).toList() + "\n"
+                        + "Generic Exception Type: " + Arrays.stream(genericExceptionType).toList() + "\n");
             }
             System.out.println("");
 
-            // Using Reflection extract information about Constructors
-
+            // create a new instance by using the newInstance() method
+            System.out.println("Create a new instance by using the newInstance() method");
+            Constructor ctor = Transaction.class.getDeclaredConstructor(TransactionMethod.class, double.class);
+            ctor.setAccessible(true);
+            Transaction transaction = (Transaction) ctor.newInstance(TransactionMethod.BANKTRANSFER_METHOD, 200);
+            System.out.println(transaction.toString());
 
         } catch (ClassNotFoundException x) {
             x.printStackTrace();
@@ -108,6 +130,8 @@ public class TransactionList {
         } catch (InvocationTargetException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (InstantiationException e) {
             throw new RuntimeException(e);
         }
     }

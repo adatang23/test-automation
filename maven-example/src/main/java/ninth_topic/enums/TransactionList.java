@@ -60,6 +60,7 @@ public class TransactionList {
             printMessage.invoke(newTransactionList, "hello");
 
             // Using Reflection extract information about Fields
+            // invoke methods with specific declaration
             // name, type, modifier
             System.out.println("Using reflection extract information about fields:");
             Field[] flds = TransactionList.class.getDeclaredFields();
@@ -77,6 +78,7 @@ public class TransactionList {
 
 
             // Using Reflection extract information about Constructors
+            // invoke methods with specific declaration
             // Please Check the Reflection extract information about Constructors
             // at ninth_topic/enums/Transaction
             System.out.println("Using reflection extract information about constructors:");
@@ -91,6 +93,7 @@ public class TransactionList {
 
             // Using Reflection extract information about Methods
             // name, modifiers, return types, parameters
+            // invoke methods with specific declaration
             System.out.println("Using reflection extract information about methods:");
             Method[] methods = TransactionList.class.getDeclaredMethods();
             for (Method method: methods) {

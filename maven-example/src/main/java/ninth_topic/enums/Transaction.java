@@ -75,6 +75,7 @@ public class Transaction {
             System.out.println("");
 
             // Using Reflection extract information about Constructors
+            // invoke methods by a specific declaration
             System.out.println("Using reflection extract information about constructors:");
             Constructor[] allConstructors = Transaction.class.getDeclaredConstructors();
             for (Constructor constructor : allConstructors) {

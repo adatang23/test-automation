@@ -4,7 +4,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.lang.reflect.Method;
 
-
 public class Main {
 
     // Please find the reflection implementation at ninth_topic/enums/TransactionList.java
@@ -13,7 +12,6 @@ public class Main {
         try {
             String envString = "QA"; // Assume "QA" is our environment
             System.out.println("Environment is: " + envString);
-
             // Dynamically configure based on the method name
             String methodName = method.getName();
             String testType = "Default";

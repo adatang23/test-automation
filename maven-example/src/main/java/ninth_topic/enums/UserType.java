@@ -1,5 +1,4 @@
 package ninth_topic.enums;
-
 import java.util.Arrays;
 
 public enum UserType {

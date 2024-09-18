@@ -1,10 +1,10 @@
 package ninth_topic.stream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import ninth_topic.enums.*;
 import ninth_topic.enums.TransactionList;
 import ninth_topic.enums.UserType;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -30,7 +30,10 @@ public class Main {
 
         // Test groupTransactionByPrice() Math.floor(price/100.0): TransactionList
         System.out.println("Test collection streaming groupTransactionByPrice():");
-        System.out.println(TransactionList.groupTransactionByPrice(transactionList));
+        Map<Double, List<Transaction>> ans = TransactionList.groupTransactionByPrice(transactionList);
+        for (Map.Entry<Double, List<Transaction>> entry: ans.entrySet()) {
+            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+        }
         System.out.println("");
 
         // Test collection streaming sortConstructionByUnitPrice()

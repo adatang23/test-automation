@@ -1,4 +1,4 @@
-package fourth_topic;
+package fourth_topic.exceptions;
 
 public class InvalidPaymentAmountException extends Exception {
     public InvalidPaymentAmountException(String message) {

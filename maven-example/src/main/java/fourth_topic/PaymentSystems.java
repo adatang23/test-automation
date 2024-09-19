@@ -1,4 +1,5 @@
 package fourth_topic;
+import fourth_topic.exceptions.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.io.BufferedInputStream;

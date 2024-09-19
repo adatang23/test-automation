@@ -1,4 +1,6 @@
 package fourth_topic;
+import fourth_topic.exceptions.*;
+
 import java.io.IOException;
 
 public class Main {

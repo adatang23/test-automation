@@ -1,4 +1,4 @@
-package fourth_topic;
+package fourth_topic.exceptions;
 
 public class PaymentIdNotFoundException extends Exception {
     public PaymentIdNotFoundException(String message) {

@@ -1,13 +1,10 @@
 package third_topic;
 
 import third_topic.constant.ProjectConstant;
-import third_topic.page.banktransfer.*;
-import third_topic.page.banktransfer.PaymentPage;
-import third_topic.page.creditcardpay.*;
+import third_topic.page.banktransfer.TransactionPage;
 import third_topic.page.creditcardpay.CheckoutPage;
-import third_topic.page.digitalwalletpay.*;
 
-import java.lang.module.Configuration;
+import java.util.concurrent.Callable;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +12,7 @@ public class Main {
         ProjectConstant.displayConfig();
         System.out.println("");
         // Calling methods in banktransfer package
-        PaymentPage paymentPageBankTransfer = new PaymentPage();
+        TransactionPage paymentPageBankTransfer = new TransactionPage();
         third_topic.page.banktransfer.CheckoutPage checkoutPageBankTransfer = new third_topic.page.banktransfer.CheckoutPage();
         paymentPageBankTransfer.openPage();
         paymentPageBankTransfer.setPaymentName("BankTransfer_072824");
@@ -31,7 +28,7 @@ public class Main {
         System.out.println("");
 
         // Calling methods in creditcardpay package
-        third_topic.page.creditcardpay.PaymentPage paymentPageCreditCardPay = new third_topic.page.creditcardpay.PaymentPage();
+        third_topic.page.creditcardpay.TransactionPage paymentPageCreditCardPay = new third_topic.page.creditcardpay.TransactionPage();
         CheckoutPage checkoutPageCreditCardPay = new CheckoutPage();
         paymentPageCreditCardPay.openPage();
         paymentPageCreditCardPay.setPaymentName("CreditCardPay_080224");
@@ -46,7 +43,7 @@ public class Main {
         System.out.println("");
 
         // Calling methods in digitalwalletpay package
-        third_topic.page.digitalwalletpay.PaymentPage paymentPageDigitalWalletPay = new third_topic.page.digitalwalletpay.PaymentPage();
+        third_topic.page.digitalwalletpay.TransactionPage paymentPageDigitalWalletPay = new third_topic.page.digitalwalletpay.TransactionPage();
         third_topic.page.digitalwalletpay.CheckoutPage checkoutPageDigitalWalletPay = new third_topic.page.digitalwalletpay.CheckoutPage();
         paymentPageDigitalWalletPay.openPage();
         paymentPageDigitalWalletPay.setPaymentName("DigitalWalletPay_080524");
@@ -61,5 +58,18 @@ public class Main {
         // Calling the static method
         ProjectConstant.incrementPaymentsCount();
         System.out.println("");
+
+        // Test the isValidBill(), addBillToPayment(), and removeBillFromPayment() in TransactionPage.java
+        // in banktransfer, creditcardpay, and digitialwalletpay packages
+        System.out.println("This is a validation test.");
+        third_topic.page.banktransfer.TransactionPage BankTransfer = new third_topic.page.banktransfer.TransactionPage();
+        third_topic.page.creditcardpay.TransactionPage CreditCardPay = new third_topic.page.creditcardpay.TransactionPage();
+        third_topic.page.digitalwalletpay.TransactionPage DigitalWalletPay = new third_topic.page.digitalwalletpay.TransactionPage();
+        BankTransfer.addBillToPayment("", -8.0);
+        BankTransfer.removeBillFromPayment("bill", -10);
+        CreditCardPay.addBillToPayment("bill", -12.0);
+        CreditCardPay.removeBillFromPayment("", -3.0);
+        DigitalWalletPay.addBillToPayment("", -6.0);
+        DigitalWalletPay.removeBillFromPayment("bill", -20.0);
     }
 }

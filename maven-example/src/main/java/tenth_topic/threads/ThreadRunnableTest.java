@@ -1,4 +1,4 @@
-package tenth_topic;
+package tenth_topic.threads;
 
 public class ThreadRunnableTest implements Runnable {
     private String message;

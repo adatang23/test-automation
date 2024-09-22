@@ -1,18 +1,2 @@
-2024-09-19 17:20:58.728 [main] FATAL fourth_topic.PaymentSystems - This is the fatal level.
-2024-09-19 17:20:58.731 [main] ERROR fourth_topic.PaymentSystems - This is the error level.
-2024-09-19 17:20:58.731 [main] WARN  fourth_topic.PaymentSystems - This is the warn level.
-2024-09-19 17:20:58.731 [main] INFO  fourth_topic.PaymentSystems - This is the info level.
-2024-09-19 17:20:58.731 [main] DEBUG fourth_topic.PaymentSystems - This is the debug level.
-2024-09-19 17:20:58.731 [main] TRACE fourth_topic.PaymentSystems - This is the trace level.
-2024-09-19 17:20:58.732 [main] WARN  fourth_topic.PaymentSystems - Can't find payment with ID: CreditCardPay, trying next ID from list.
-2024-09-19 17:20:58.732 [main] FATAL fourth_topic.PaymentSystems - Error retrieving payment: Can't find payment with ID: CreditCardPay or any other payment.
-2024-09-19 17:20:58.733 [main] ERROR fourth_topic.PaymentSystems - Invalid payment ID: 1 2 3 4 5, alphanumeric only.
-2024-09-19 17:20:58.733 [main] FATAL fourth_topic.PaymentSystems - Error retrieving invalid payment id: Invalid payment ID: 1 2 3 4 5 (invalid character)
-2024-09-19 17:20:58.733 [main] ERROR fourth_topic.PaymentSystems - Payment is not existed.
-2024-09-19 17:20:58.734 [main] FATAL fourth_topic.PaymentSystems - Error retrieving invalid payment: Can't find the payment, try an existed one.
-2024-09-19 17:20:58.741 [main] ERROR fourth_topic.PaymentSystems - Invalid Payment Method: class fourth_topic.PaymentSystems$InvalidMethod
-2024-09-19 17:20:58.742 [main] FATAL fourth_topic.PaymentSystems - Error retrieving invalid payment method: Can't find payment method: class fourth_topic.PaymentSystems$InvalidMethod, try a valid method.
-2024-09-19 17:20:58.742 [main] INFO  fourth_topic.PaymentSystems - Valid Payment Method: class fourth_topic.PaymentSystems$CreditCard
-2024-09-19 17:20:58.743 [main] ERROR fourth_topic.PaymentSystems - Invalid Transaction amount: -100.0
-2024-09-19 17:20:58.743 [main] FATAL fourth_topic.PaymentSystems - Error retrieving invalid payment amount: Can't transact $-100.0, try a valid amount
-2024-09-19 17:20:58.744 [main] FATAL fourth_topic.PaymentSystems - Can't find the payment file:  (No such file or directory)
+2024-09-22 01:16:38.864 [main] INFO  tenth_topic.connectionpool.ConnectionPool - Connection pool initialization...
+2024-09-22 01:16:38.868 [main] INFO  tenth_topic.connectionpool.ConnectionPool - Connection pool initialization...

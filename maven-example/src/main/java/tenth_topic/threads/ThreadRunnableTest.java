@@ -2,7 +2,6 @@ package tenth_topic.threads;
 
 public class ThreadRunnableTest implements Runnable {
     private String message;
-
     ThreadRunnableTest(String message) {
         this.message = message;
     }

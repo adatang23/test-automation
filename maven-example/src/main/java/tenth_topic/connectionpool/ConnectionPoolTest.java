@@ -4,7 +4,7 @@ public class ConnectionPoolTest {
     public static void main(String[] args) throws Exception {
         /**
          * Test01 of ConnectionPool.java:
-         * 7 connections can be added to the thread pool, add another one was not allowed.
+         * 7 connections can be added to the thread pool, and adding another one was not allowed.
          * 5 connections can be moved from the thread pool to the connection pool
          * from the beginning towards the end. (ConcurrentLinkedPool FIFO)
          * A particular connection can be released from the connection pool.
@@ -43,8 +43,8 @@ public class ConnectionPoolTest {
          * 7 connections can be added to the thread pool, add another one was not allowed.
          * 5 connections can be moved from the thread pool to the connection pool
          * from the beginning towards the end. (ConcurrentLinkedPool FIFO)
-         * the rest connections should wait in the thread pool
-         * when there are 5 connections in the connection pool. Otherwise, throw exception.
+         * the other connections should wait in the thread pool
+         * when there are 5 connections in the connection pool. Otherwise, throw an exception.
          */
         System.out.println("Test02 of ConnectionPool.java:" + "\n"
                 + "Throw exception when adding another connection to the connection pool" + "\n"

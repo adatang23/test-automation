@@ -1,7 +1,5 @@
 package tenth_topic.connectionpool;
 
-import java.util.concurrent.ThreadFactory;
-
 public class MockConnection {
     private String url;
     private String userName;

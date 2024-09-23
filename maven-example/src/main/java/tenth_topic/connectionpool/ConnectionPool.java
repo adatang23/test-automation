@@ -40,7 +40,7 @@ public class ConnectionPool {
 
     /**
      * Create a new connection and check the thread connection pool size
-     * if the thread conneciton pool size < 7,
+     * if the thread connection pool size < 7,
      * add the new connection to the end of the thread connection pool
      */
     public synchronized MockConnection createNewConnection(String url, String name, String password) {
@@ -51,19 +51,18 @@ public class ConnectionPool {
         } else {
             System.out.println("Thread Connection Pool is full, new connection "
                     + newMockConnection.getUrl() + " is not added.");
-            //this.notifyAll();
         }
         return newMockConnection;
     }
 
 
     /**
-     * While the thread connection pool size > 0, if the available connection pool size < 5,
+     * if the thread connection pool size > 0, if the available connection pool size < 5,
      * get the first connection from the thread connection pool with threadConnectionPool.get().poll()
      * add this connection to the end of the available connection pool;
      * else if the available connection pool size == 5, the current thread wait for some time;
-     * if it is timeout, throw new exception "Connection not available"
-     * The 2 threads waiting for the next available connection would be moved
+     * if it is timeout, throw a new exception "Connection not available"
+     * The 2 threads waiting for the next available connection will be moved
      * to the front of the concurrentLinkedQueue
      */
     public synchronized void getConnection(long timeout) throws InterruptedException {

@@ -30,7 +30,7 @@ public class ThreadExtendThreadTest extends Thread {
         // Test t1.interrupt() when throw exception
         System.out.println("Test interrupt() when throw exception:");
         ThreadExtendThreadTest t1 = new ThreadExtendThreadTest("ThrowException", "Hello World!");
-        ThreadExtendThreadTest t2 = new ThreadExtendThreadTest("Default","A computer course");
+        ThreadExtendThreadTest t2 = new ThreadExtendThreadTest("Default", "A computer course");
         t1.start();
         t2.start();
         try {

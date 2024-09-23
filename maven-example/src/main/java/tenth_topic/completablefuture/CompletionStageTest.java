@@ -16,11 +16,11 @@ public class CompletionStageTest {
 
         // Test thenAccept()
         CompletionStage<Void> stage03 = stage02
-                .thenAccept(s -> System.out.println("Test of future03: print future02: " + s));
+                .thenAccept(s -> System.out.println("Test of stage03: print stage02: " + s));
 
         // Test thenRun()
         CompletionStage<Void> stage04 = stage02
-                .thenRun(() -> System.out.println("Test of future04: just print this line."));
+                .thenRun(() -> System.out.println("Test of stage04: just print this line."));
 
         // Test thenCompose()
         CompletionStage stage05 = CompletableFuture.supplyAsync(() -> "Hello")
@@ -46,7 +46,7 @@ public class CompletionStageTest {
                 .map(CompletableFuture::join)
                 .collect(Collectors.joining(" "));
         Assert.assertEquals("Hello Beautiful World", stage11);
-        System.out.println("Test of future12: " + stage11);
+        System.out.println("Test of stage11: " + stage11);
 
         // Test handling Errors
         String name = null;
@@ -57,6 +57,6 @@ public class CompletionStageTest {
             return "Hello, " + name;
         }).handle((s, t) -> s != null ? s : "Hello, Stranger!");
         Assert.assertEquals("Hello, Stranger!", ((CompletableFuture<String>) stage12).get().toString());
-        System.out.println("Test of future13: " + ((CompletableFuture<String>) stage12).get().toString());
+        System.out.println("Test of stage12: " + ((CompletableFuture<String>) stage12).get().toString());
     }
 }

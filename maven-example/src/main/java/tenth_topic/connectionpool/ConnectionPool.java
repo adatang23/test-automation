@@ -63,7 +63,7 @@ public class ConnectionPool {
      * else if the available connection pool size == 5, the current thread wait for some time;
      * if it is timeout, throw a new exception "Connection not available"
      * The 2 threads waiting for the next available connection will be moved
-     * to the front of the concurrentLinkedQueue
+     * to the front of the thread pool.
      */
     public synchronized void getConnection(long timeout) throws InterruptedException {
         long timestamp = System.currentTimeMillis() + timeout;

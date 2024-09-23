@@ -6,7 +6,7 @@ public class ConnectionPoolTest {
          * Test01 of ConnectionPool.java:
          * 7 connections can be added to the thread pool, and adding another one was not allowed.
          * 5 connections can be moved from the thread pool to the connection pool
-         * from the beginning towards the end. (ConcurrentLinkedPool FIFO)
+         * from the beginning towards the end. (ConcurrentLinkedQueue FIFO)
          * A particular connection can be released from the connection pool.
          */
         System.out.println("Test01 of ConnectionPool.java:");
@@ -40,9 +40,9 @@ public class ConnectionPoolTest {
         /**
          * wait() method in Java: Syntax: public final void wait() throws InterruptedException
          * Test02 of ConnectionPool.java:
-         * 7 connections can be added to the thread pool, add another one was not allowed.
+         * 7 connections can be added to the thread pool, and adding another one was not allowed.
          * 5 connections can be moved from the thread pool to the connection pool
-         * from the beginning towards the end. (ConcurrentLinkedPool FIFO)
+         * from the beginning towards the end. (ConcurrentLinkedQueue FIFO)
          * the other connections should wait in the thread pool
          * when there are 5 connections in the connection pool. Otherwise, throw an exception.
          */

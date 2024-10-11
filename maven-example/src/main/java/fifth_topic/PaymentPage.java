@@ -1,6 +1,0 @@
-package fifth_topic;
-
-public abstract class PaymentPage extends AbstractPage {
-
-    public abstract void paymentMethod();
-}

@@ -1,7 +1,7 @@
 package java_basics.fourth_topic;
-import fourth_topic.exceptions.*;
 import java_basics.fourth_topic.exceptions.*;
-import java_basics.fourth_topic.fourth_topic.exceptions.*;
+import java_basics.fourth_topic.exceptions.*;
+import java_basics.fourth_topic.exceptions.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.io.BufferedInputStream;

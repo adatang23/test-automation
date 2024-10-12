@@ -1,7 +1,7 @@
 package java_basics.fourth_topic;
-import fourth_topic.exceptions.*;
 import java_basics.fourth_topic.exceptions.*;
-import java_basics.fourth_topic.fourth_topic.exceptions.*;
+import java_basics.fourth_topic.exceptions.*;
+import java_basics.fourth_topic.exceptions.*;
 
 import java.io.IOException;
 

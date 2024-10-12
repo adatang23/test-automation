@@ -1,0 +1,21 @@
+package database.db_third_topic.bank.factory;
+import database.db_third_topic.bank.dao.CustomerDAO;
+import database.db_third_topic.bank.exception.*;
+import static database.db_third_topic.bank.constant.ProjectConstant.*;
+
+public abstract class DAOFactory {
+    public abstract CustomerDAO getUserDAO() throws DAOException;
+
+    public static DAOFactory getDAOFactory(int whichFactory) {
+        switch (whichFactory) {
+            case ORACLE:
+                return new OracleDAOFactory();
+            case MYSQL:
+                return new MySQLDAOFactory();
+            case POSTGRESQL:
+                return new PostgreSQLDAOFactory();
+            default:
+                return null;
+        }
+    }
+}

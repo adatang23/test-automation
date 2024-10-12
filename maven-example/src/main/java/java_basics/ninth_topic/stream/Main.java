@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 import java_basics.ninth_topic.enums.*;
-import java_basics.ninth_topic.ninth_topic.enums.*;
-import ninth_topic.enums.*;
+import java_basics.ninth_topic.enums.*;
+import java_basics.ninth_topic.enums.*;
 
 public class Main {
     public static void main(String[] args) {

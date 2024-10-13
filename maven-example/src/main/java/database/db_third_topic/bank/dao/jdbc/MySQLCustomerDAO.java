@@ -56,7 +56,7 @@ public class MySQLCustomerDAO implements CustomerDAO {
     public void setSafeUpdates(Integer n) throws SQLException {
         Object[] values = {n};
         try (Connection connection = DBConnection.getConnection();
-             PreparedStatement statement = preparedStatement(connection, SQL_SET_SAFE_UPDATES_CUSTOMER,
+             PreparedStatement statement = preparedStatement(connection, SQL_SET_SAFE_UPDATES,
                      false, values)) {
             statement.executeUpdate();
         } catch (SQLException e) {

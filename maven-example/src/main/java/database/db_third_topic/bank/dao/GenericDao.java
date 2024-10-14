@@ -1,6 +1,4 @@
 package database.db_third_topic.bank.dao;
-import database.db_third_topic.bank.model.Customer;
-
 import java.sql.*;
 
 public interface GenericDao<T, V> {

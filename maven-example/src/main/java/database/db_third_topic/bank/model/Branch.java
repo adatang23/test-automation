@@ -34,7 +34,5 @@ public class Branch {
         return phone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    public void setPhone(String phone) { this.phone = phone; }
 }

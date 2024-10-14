@@ -7,6 +7,7 @@ import database.db_third_topic.bank.model.Customer;
 
 public class CustomerService {
     private final CustomerDAO customerDAO;
+
     public CustomerService(DAOFactory daoFactory) throws DAOException {
         this.customerDAO = daoFactory.getUserDAO();
     }

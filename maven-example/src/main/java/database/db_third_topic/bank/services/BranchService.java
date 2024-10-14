@@ -8,6 +8,7 @@ import database.db_third_topic.bank.model.Branch;
 
 public class BranchService {
     private final BranchDAO branchDAO;
+
     public BranchService(DAOFactory daoFactory) throws DAOException {
         this.branchDAO = daoFactory.getBranchDAO();
     }
@@ -39,5 +40,4 @@ public class BranchService {
     public Branch getBranch(Integer id) throws SQLException {
         return branchDAO.findById(id);
     }
-
 }

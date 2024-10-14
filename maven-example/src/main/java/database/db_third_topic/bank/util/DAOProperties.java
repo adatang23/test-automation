@@ -9,6 +9,7 @@ import static database.db_third_topic.bank.constant.ProjectConstant.*;
 
 public class DAOProperties {
     private static final Properties PROPERTIES = new Properties();
+
     private final String propertyKeyName;
 
     static {

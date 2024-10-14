@@ -1,8 +1,5 @@
 package database.db_third_topic.bank.dao;
-
 import database.db_third_topic.bank.model.Account;
-import database.db_third_topic.bank.model.Customer;
-
 import java.sql.SQLException;
 
 public interface AccountDAO extends GenericDao<Account, Integer> {

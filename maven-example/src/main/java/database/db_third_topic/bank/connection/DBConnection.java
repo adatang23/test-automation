@@ -29,7 +29,6 @@ public class DBConnection {
     public static Connection getConnection() throws SQLException {
         if (instance == null) {
             instance = new DBConnection();
-            //System.out.println("Connection ------ NEW DBConnection created");
             logger.info("Connection ------ NEW DBConnection created");
         }
         return DriverManager.getConnection(instance.url, instance.userName, instance.password);

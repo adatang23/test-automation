@@ -8,6 +8,7 @@ import database.db_third_topic.bank.model.AccountType;
 
 public class AccountTypeService {
     private final AccountTypeDAO accountTypeDAO;
+
     public AccountTypeService(DAOFactory daoFactory) throws DAOException {
         this.accountTypeDAO = daoFactory.getAccountTypeDAO();
     }

@@ -4,11 +4,10 @@ import database.db_third_topic.bank.constant.ProjectConstant;
 import database.db_third_topic.bank.dao.AccountTypeDAO;
 import database.db_third_topic.bank.exception.DAOException;
 import java.sql.*;
-
 import static database.db_third_topic.bank.constant.ProjectConstant.*;
 import static database.db_third_topic.bank.util.DAOUtil.preparedStatement;
 import database.db_third_topic.bank.model.AccountType;
-import database.db_third_topic.bank.model.Customer;
+
 
 
 public class MySQLAccountTypeDAO implements AccountTypeDAO {

@@ -1,0 +1,61 @@
+<customer>
+    <id>1</id>
+    <name>John Smith</name>
+    <password>password123</password>
+    <dob>1980-03-23</dob>
+    <address>
+        <city>San Francisco</city>
+        <street>Lombard Street</street>
+        <zipCode>94111</zipCode>
+    </address>
+    <accounts>
+        <account>
+            <accountId>1</accountId>
+            <userId>1</userId>
+            <openedDate>2016-08-10</openedDate>
+            <balance>20300.00</balance>
+            <branch>
+                <branchId>1</branchId>
+                <branchName>Branch01</branchName>
+                <address>
+                    <city>New York</city>
+                    <street>Wall Street</street>
+                    <zipCode>10005</zipCode>
+                </address>
+                <phone>4748995503</phone>
+            </branch>
+        </account>
+        <account>
+            <accountId>2</accountId>
+            <userId>1</userId>
+            <openedDate>2019-10-20</openedDate>
+            <balance>100800.00</balance>
+            <branch>
+                <branchId>2</branchId>
+                <branchName>Branch02</branchName>
+                <address>
+                    <city>Boston</city>
+                    <street>Cambridge Street</street>
+                    <zipCode>02114</zipCode>
+                </address>
+                <phone>6234213337</phone>
+            </branch>
+        </account>
+    </accounts>
+    <transactions>
+        <transaction>
+            <transactionId>1</transactionId>
+            <fromAccountId>1</fromAccountId>
+            <toAccountId>2</toAccountId>
+            <amount>2000.00</amount>
+            <transactionDate>2024-06-25</transactionDate>
+        </transaction>
+        <transaction>
+            <transactionId>2</transactionId>
+            <fromAccountId>1</fromAccountId>
+            <toAccountId>3</toAccountId>
+            <amount>660.00</amount>
+            <transactionDate>2024-10-02</transactionDate>
+        </transaction>
+    </transactions>
+</customer>

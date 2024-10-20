@@ -1,0 +1,20 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="branch" type="BranchType"/>
+
+    <xs:complexType name="BranchType">
+        <xs:sequence>
+            <xs:element name="branchId" type="xs:int"/>
+            <xs:element name="branchName" type="xs:string"/>
+            <xs:element name="address" type="AddressType"/>
+            <xs:element name="phone" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="AddressType">
+        <xs:sequence>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="street" type="xs:string"/>
+            <xs:element name="zipCode" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

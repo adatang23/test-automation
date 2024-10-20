@@ -1,0 +1,63 @@
+{
+  "id": 1,
+  "name": "John Smith",
+  "password": "password123",
+  "dob": "1980-03-23",
+  "address": {
+    "city": "San Francisco",
+    "street": "Lombard Street",
+    "zipCode": "94111"
+  },
+  "accounts" : [
+    {
+      "accountId": 1,
+      "userId": 1,
+      "openedDate": "2016-08-10",
+      "balance": 20300.00,
+      "branch": {
+        "branchId": 1,
+        "branchName": "Branch01",
+        "address": {
+          "city": "New York",
+          "street": "Wall Street",
+          "zipCode": "10005"
+        },
+        "phone": "4748995503"
+      }
+    },
+    {
+      "accountId": 2,
+      "userId": 1,
+      "openedDate": "2019-10-20",
+      "balance": 100800.00,
+      "branch": {
+        "branchId": 2,
+        "branchName": "Branch02",
+        "address": {
+          "city": "Boston",
+          "street": "Cambridge Street",
+          "zipCode": "02114"
+        },
+        "phone": "6234213337"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "transactionId": 1,
+      "fromAccountId": 1,
+      "toAccountId": 2,
+      "amount": 2000.00,
+      "transactionDate": "2024-06-25"
+    },
+    {
+      "transactionId": 2,
+      "fromAccountId": 1,
+      "toAccountId": 3,
+      "amount": 660.00,
+      "transactionDate": "2024-10-02"
+    }
+  ]
+}
+
+

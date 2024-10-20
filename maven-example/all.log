@@ -1,1 +1,2 @@
-2024-10-14 00:53:29.832 [main] INFO  database.db_third_topic.bank.connection.DBConnection - Connection ------ NEW DBConnection created
+2024-10-20 18:02:10.096 [main] INFO  database.db_fourth_topic.parsers.validator.XMLValidator - XML is valid.
+2024-10-20 18:02:10.409 [main] INFO  database.db_fourth_topic.parsers.validator.XMLValidator - XML is valid.

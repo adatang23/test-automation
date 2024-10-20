@@ -1,0 +1,13 @@
+<branch>
+    <branchId>1</branchId>
+    <branchName>Branch01</branchName>
+    <address>
+        <city>New York</city>
+        <street>Wall Street</street>
+        <zipCode>10005</zipCode>
+    </address>
+    <phone>4748995503</phone>
+</branch>
+
+
+

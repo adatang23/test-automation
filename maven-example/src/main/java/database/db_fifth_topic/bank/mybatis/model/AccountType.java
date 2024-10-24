@@ -5,6 +5,9 @@ public class AccountType {
     private String account_type_name;
     private Double interest_rate;
 
+    public AccountType() {
+    }
+
     public Integer getAccount_type_id() {
         return account_type_id;
     }

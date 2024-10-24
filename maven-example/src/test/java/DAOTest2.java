@@ -243,9 +243,12 @@ public class DAOTest2 {
         String newPassword = "NewPassword";
         customerService.updatePassword(customer, newPassword);
         Customer updatedCustomer = customerService.getCustomer(1);
-        Assert.assertEquals(updatedCustomer.getCustomer_id(), customer.getCustomer_id(), "Customer id must match");
-        Assert.assertEquals(updatedCustomer.getUser_name(), customer.getUser_name(), "User name must match");
-        Assert.assertEquals(updatedCustomer.getPassword(), newPassword, "Password must match");
+        Assert.assertEquals(updatedCustomer.getCustomer_id(), customer.getCustomer_id(),
+                "Customer id must match");
+        Assert.assertEquals(updatedCustomer.getUser_name(), customer.getUser_name(),
+                "User name must match");
+        Assert.assertEquals(updatedCustomer.getPassword(), newPassword,
+                "Password must match");
     }
 
     @Test(priority = 11, description = "Update an account's balance with account_id=2")
@@ -259,9 +262,12 @@ public class DAOTest2 {
         Account updatedAccount = accountService.getAccount(2);
         System.out.println("Account successfully updated with account_id: " + ACCOUNT_2.getAccount_id()
                 + " balance: $" + ACCOUNT_2.getBalance());
-        Assert.assertEquals(updatedAccount.getAccount_id(), ACCOUNT_2.getAccount_id(), "Account id must match");
-        Assert.assertEquals(updatedAccount.getUser_id(), ACCOUNT_2.getAccount_id(), "User id must match");
-        Assert.assertEquals(updatedAccount.getBalance(), newBalance, "Balance must match");
+        Assert.assertEquals(updatedAccount.getAccount_id(), ACCOUNT_2.getAccount_id(),
+                "Account id must match");
+        Assert.assertEquals(updatedAccount.getUser_id(), ACCOUNT_2.getAccount_id(),
+                "User id must match");
+        Assert.assertEquals(updatedAccount.getBalance(), newBalance,
+                "Balance must match");
     }
 
     @Test(priority = 12, description = "Update a branch's phone with branch_id=1")
@@ -294,7 +300,7 @@ public class DAOTest2 {
         }
     }
 
-    @Test(priority = 14, description = "Delete an account with account_id=1")
+    @Test(priority = 14, description = "Delete an account with account_id=2")
     public void deleteAccountTest15() throws SQLException {
         DAOFactory mySQLFactory = DAOFactory.getDAOFactory(ProjectConstant.MYSQL);
         AccountService accountService = new AccountService(mySQLFactory);

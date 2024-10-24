@@ -8,6 +8,9 @@ public class Account {
     private Double balance;
     private Integer branch_id;
 
+    public Account() {
+    }
+
     public Integer getAccount_id() {
         return account_id;
     }

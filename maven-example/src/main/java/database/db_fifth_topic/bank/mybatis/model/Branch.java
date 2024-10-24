@@ -6,6 +6,9 @@ public class Branch {
     private String address;
     private String phone;
 
+    public Branch() {
+    }
+
     public Integer getBranch_id() {
         return branch_id;
     }

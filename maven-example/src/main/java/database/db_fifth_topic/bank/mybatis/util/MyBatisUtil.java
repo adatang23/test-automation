@@ -8,13 +8,16 @@ import java.io.IOException;
 import java.io.Reader;
 
 public class MyBatisUtil {
+    public static final int MYSQL = 1;
+    public static final int ORACLE = 2;
+    public static final int POSTGRESQL = 3;
 
     static Logger logger = LogManager.getLogger(MyBatisUtil.class.getName());
 
     private MyBatisUtil() {
     }
 
-    public static SqlSessionFactory getSqlSessionFactory() {
+    public static SqlSessionFactory getSqlSessionFactory(int whichFactory) {
         Reader reader = null;
         try {
             reader = Resources.getResourceAsReader("mybatis-config.xml");
@@ -22,6 +25,15 @@ public class MyBatisUtil {
             logger.error(e.getMessage());
             System.out.println(e.getMessage());
         }
-        return new SqlSessionFactoryBuilder().build(reader);
+        switch(whichFactory) {
+            case MYSQL:
+                return new SqlSessionFactoryBuilder().build(reader, "developement");
+            case ORACLE:
+                return new SqlSessionFactoryBuilder().build(reader, "oracle");
+            case POSTGRESQL:
+                return new SqlSessionFactoryBuilder().build(reader, "postgres");
+            default:
+                return null;
+        }
     }
 }

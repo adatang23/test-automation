@@ -4,7 +4,8 @@
 <mapper namespace="database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper">
 
     <!-- Create/Insert a new customer into the users table -->
-    <insert id="create" parameterType="database.db_fifth_topic.bank.mybatis.model.Customer" useGeneratedKeys="true" keyProperty="customer_id">
+    <insert id="create" parameterType="database.db_fifth_topic.bank.mybatis.model.Customer"
+            useGeneratedKeys="true" keyProperty="customer_id">
         INSERT INTO Customer (user_name, password, first_name, last_name, phone, email, registration_date)
         VALUES (
         #{user_name},

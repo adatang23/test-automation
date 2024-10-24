@@ -14,9 +14,26 @@
                 <property name="password" value="${db.pass}" />
             </dataSource>
         </environment>
+        <environment id="oracle">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${oracle.jdbc.driver}" />
+                <property name="url" value="${oracle.jdbc.url}" />
+            </dataSource>
+        </environment>
+        <environment id="postgres">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${postgres.jdbc.driver}" />
+                <property name="url" value="${postgres.jdbc.url}" />
+            </dataSource>
+        </environment>
     </environments>
 
     <mappers>
+        <mapper resource="mappers/AccountMapper.xml" />
+        <mapper resource="mappers/AccountTypeMapper.xml" />
+        <mapper resource="mappers/BranchMapper.xml" />
         <mapper resource="mappers/CustomerMapper.xml" />
     </mappers>
 </configuration>

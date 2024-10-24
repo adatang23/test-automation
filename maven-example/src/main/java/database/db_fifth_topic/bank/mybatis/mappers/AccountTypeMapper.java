@@ -1,5 +1,4 @@
 package database.db_fifth_topic.bank.mybatis.mappers;
-
 import database.db_fifth_topic.bank.mybatis.model.AccountType;
 
 public interface AccountTypeMapper {

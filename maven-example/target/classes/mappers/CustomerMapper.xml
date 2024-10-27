@@ -34,6 +34,11 @@
         UPDATE Customer SET password = #{a} WHERE customer_id = #{b};
     </update>
 
+    <!--Update a customer's phone by their ID -->
+    <update id="updatePhone">
+        UPDATE Customer SET phone = #{a} WHERE customer_id = #{b};
+    </update>
+
     <update id="setSafeUpdates" parameterType="Integer">
         SET SQL_SAFE_UPDATES = #{n};
     </update>

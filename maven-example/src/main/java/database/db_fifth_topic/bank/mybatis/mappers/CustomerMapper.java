@@ -12,6 +12,8 @@ public interface CustomerMapper {
 
     void updatePassword(@Param("a") String password, @Param("b") Integer customer_id);
 
+    void updatePhone(@Param("a") String phone, @Param("b") Integer customer_id);
+
     void resetAutoIncrement();
 
     void setSafeUpdates(Integer n);

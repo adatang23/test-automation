@@ -5,7 +5,7 @@ import database.db_fifth_topic.bank.mybatis.model.Branch;
 import org.apache.ibatis.session.SqlSession;
 
 /**
- * Open closed principle:
+ * Open Closed principle:
  * Objects or entities should be open for extension but closed for modification.
  * The ObjectCreateBase class should be extendable without modifying the class itself.
  */

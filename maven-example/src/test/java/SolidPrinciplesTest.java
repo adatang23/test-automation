@@ -1,6 +1,10 @@
 import database.db_fifth_topic.bank.mybatis.model.*;
+import database.db_fifth_topic.bank.mybatis.service.AccountTypeService;
 import database.db_fifth_topic.bank.mybatis.service.BranchService;
-import database.db_sixth_topic.solid_principles.interface_segregation.CustomerUpdate;
+import database.db_sixth_topic.solid_principles.dependency_inversion.AccountInterestType;
+import database.db_sixth_topic.solid_principles.dependency_inversion.AccountTypeCreateService;
+import database.db_sixth_topic.solid_principles.dependency_inversion.Filter;
+import database.db_sixth_topic.solid_principles.interface_segregation.*;
 import database.db_sixth_topic.solid_principles.liskov.BranchListImpl;
 import database.db_sixth_topic.solid_principles.liskov.CustomerListImpl;
 import database.db_sixth_topic.solid_principles.single_responsibility.mybatis.service.*;
@@ -64,6 +68,32 @@ public class SolidPrinciplesTest {
     };
 
 
+    // Dependency Inversion principle
+    private static Filter filterChecking = new Filter(AccountInterestType.CHECKING);
+    private static Filter filterSaving = new Filter(AccountInterestType.SAVING);
+    private static Filter filterCD = new Filter(AccountInterestType.CERTIFICATE_OF_DEPOSIT);
+
+    private static final AccountType ACCOUNT_TYPE_1 = new AccountType() {
+        {
+            setAccount_type_name(filterChecking.getName());
+            setInterest_rate(Double.valueOf(filterChecking.getValue()));
+        }
+    };
+
+    private static final AccountType ACCOUNT_TYPE_2 = new AccountType() {
+        {
+            setAccount_type_name(filterSaving.getName());
+            setInterest_rate(Double.valueOf(filterSaving.getValue()));
+        }
+    };
+
+    private static final AccountType ACCOUNT_TYPE_3 = new AccountType() {
+        {
+            setAccount_type_name(filterCD.getName());
+            setInterest_rate(Double.valueOf(filterCD.getValue()));
+        }
+    };
+
     // Single responsibility principle
     @Test(priority = 0, description = "Create a Customer1")
     public void createCustomerTest01() {
@@ -118,7 +148,7 @@ public class SolidPrinciplesTest {
 
 
     // Open closed principle, BranchCreate
-    @Test(priority = 3, description = "Create a Branch")
+    @Test(priority = 3, description = "Create a Branch1")
     public void createBranchTest03() {
         BranchCreate branchCreate = new BranchCreate();
         BranchService branchService = new BranchService();
@@ -137,7 +167,7 @@ public class SolidPrinciplesTest {
     }
 
     // Liskov principle, BranchListImpl
-    @Test(priority = 4, description = "Create a Branch")
+    @Test(priority = 4, description = "Create a Branch2")
     public void createBranchTest04() {
         BranchListImpl branchList = new BranchListImpl();
         branchList.add(BRANCH_2);
@@ -152,10 +182,68 @@ public class SolidPrinciplesTest {
         Assert.assertEquals(branch.getPhone(), BRANCH_2.getPhone(), "Phone must match");
     }
 
+    // Dependency Inversion principle, Filter, AccountTypeCreateService
+    @Test(priority = 5, description = "Create an AccountType1")
+    public void createAccountTypeTest04() {
+        AccountTypeCreateService accountTypeCreateService = new AccountTypeCreateService();
+        AccountTypeService accountTypeService = new AccountTypeService();
+        accountTypeService.setSafeUpdates(0);
+        accountTypeService.deleteAllAccountTypes();
+        accountTypeService.resetAutoIncrement();
+        accountTypeService.setSafeUpdates(1);
+        accountTypeCreateService.create(ACCOUNT_TYPE_1);
+        AccountType accountType = accountTypeService.getAccountType(ACCOUNT_TYPE_1.getAccount_type_id());
+        System.out.println("Account Type successfully created: " + accountType.getAccount_type_name());
+        checkAccountType01(accountType);
+    }
+
+    private void checkAccountType01(AccountType accountType) {
+        Assert.assertEquals(accountType.getAccount_type_name(), ACCOUNT_TYPE_1.getAccount_type_name(),
+                "Account Type name must match");
+        Assert.assertEquals(accountType.getInterest_rate(), ACCOUNT_TYPE_1.getInterest_rate(),
+                "Interest rate must match");
+    }
+
+
+    // Dependency Inversion principle, Filter, AccountTypeCreateService
+    @Test(priority = 5, description = "Create an AccountType2")
+    public void createAccountTypeTest05() {
+        AccountTypeCreateService accountTypeCreateService = new AccountTypeCreateService();
+        AccountTypeService accountTypeService = new AccountTypeService();
+        accountTypeCreateService.create(ACCOUNT_TYPE_2);
+        AccountType accountType = accountTypeService.getAccountType(ACCOUNT_TYPE_2.getAccount_type_id());
+        System.out.println("Account Type successfully created: " + accountType.getAccount_type_name());
+        checkAccountType02(accountType);
+    }
+
+    private void checkAccountType02(AccountType accountType) {
+        Assert.assertEquals(accountType.getAccount_type_name(), ACCOUNT_TYPE_2.getAccount_type_name(),
+                "Account Type name must match");
+        Assert.assertEquals(accountType.getInterest_rate(), ACCOUNT_TYPE_2.getInterest_rate(),
+                "Interest rate must match");
+    }
+
+    // Dependency Inversion principle, Filter, AccountTypeCreateService
+    @Test(priority = 6, description = "Create an AccountType3")
+    public void createAccountTypeTest06() {
+        AccountTypeCreateService accountTypeCreateService = new AccountTypeCreateService();
+        AccountTypeService accountTypeService = new AccountTypeService();
+        accountTypeCreateService.create(ACCOUNT_TYPE_3);
+        AccountType accountType = accountTypeService.getAccountType(ACCOUNT_TYPE_3.getAccount_type_id());
+        System.out.println("Account Type successfully created: " + accountType.getAccount_type_name());
+        checkAccountType03(accountType);
+    }
+
+    private void checkAccountType03(AccountType accountType) {
+        Assert.assertEquals(accountType.getAccount_type_name(), ACCOUNT_TYPE_3.getAccount_type_name(),
+                "Account Type name must match");
+        Assert.assertEquals(accountType.getInterest_rate(), ACCOUNT_TYPE_3.getInterest_rate(),
+                "Interest rate must match");
+    }
 
 
     // Single responsibility principle
-    @Test(priority = 6, description = "Select the Customer1")
+    @Test(priority = 7, description = "Select the Customer1")
     public void selectCustomerTest07() {
         CustomerSelectService customerSelectService = new CustomerSelectService();
         Customer customer = customerSelectService.getCustomer(CUSTOMER_1.getCustomer_id());
@@ -181,25 +269,39 @@ public class SolidPrinciplesTest {
                 "Password must match");
     }
 
-
-
-    /*
-    // Single responsibility principle
-    @Test(priority = 10, description = "Update the Customer1's password")
-    public void updateCustomerPasswordTest11() {
-        CustomerUpdateService customerUpdateService = new CustomerUpdateService();
+    // Interface segregation principle, CustomerUpdate
+    @Test(priority = 11, description = "Update the Customer1's phone")
+    public void updateCustomerPhoneTest11() {
+        CustomerUpdate customerUpdate = new CustomerUpdate();
         CustomerSelectService customerSelectService = new CustomerSelectService();
         Customer customer = customerSelectService.getCustomer(CUSTOMER_1.getCustomer_id());
-        String newPassword = "NewPassword";
-        customerUpdateService.updatePassword(newPassword, CUSTOMER_1.getCustomer_id());
+        String newPhone = "3115155144";
+        customerUpdate.updatePassword(newPhone, CUSTOMER_1.getCustomer_id());
         Customer updatedCustomer = customerSelectService.getCustomer(CUSTOMER_1.getCustomer_id());
         Assert.assertEquals(updatedCustomer.getCustomer_id(), customer.getCustomer_id(),
                 "Customer id must match");
         Assert.assertEquals(updatedCustomer.getUser_name(), customer.getUser_name(),
                 "User name must match");
-        Assert.assertEquals(updatedCustomer.getPassword(), newPassword,
+        Assert.assertEquals(updatedCustomer.getPassword(), newPhone,
                 "Password must match");
-    } */
+    }
+
+    // Interface segregation principle, BranchUpdate
+    @Test(priority = 12, description = "Update the Branch1's phone")
+    public void updateBranchPhoneTest11() {
+        BranchUpdate branchUpdate = new BranchUpdate();
+        BranchService branchService = new BranchService();
+        Branch branch = branchService.getBranch(BRANCH_1.getBranch_id());
+        String newPhone = "5905133311";
+        branchUpdate.updatePhone(newPhone, BRANCH_1.getBranch_id());
+        Branch updatedBranch = branchService.getBranch(CUSTOMER_1.getCustomer_id());
+        Assert.assertEquals(updatedBranch.getBranch_id(), branch.getBranch_id(),
+                "Branch id must match");
+        Assert.assertEquals(updatedBranch.getBranch_name(), branch.getBranch_name(),
+                "Branch name must match");
+        Assert.assertEquals(updatedBranch.getPhone(), newPhone,
+                "Phone must match");
+    }
 
 
     // Single responsibility principle

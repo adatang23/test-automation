@@ -5,7 +5,7 @@ import database.db_fifth_topic.bank.mybatis.util.MyBatisUtil;
 import org.apache.ibatis.session.SqlSession;
 
 /**
- * Single responsibility principle:
+ * Single Responsibility principle:
  * A class should have only one reason to change, meaning it should only have one responsibility.
  * CustomerSelectService class only have one responsibility to select customers.
  */

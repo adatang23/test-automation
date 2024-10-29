@@ -1,199 +1,614 @@
-2024-10-28 00:37:01.806 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
-2024-10-28 00:37:01.831 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:01.832 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:01.832 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:01.833 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.024 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:02.242 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 306674056.
-2024-10-28 00:37:02.248 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - ==>  Preparing: SET SQL_SAFE_UPDATES = ?;
-2024-10-28 00:37:02.302 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - ==> Parameters: 0(Integer)
-2024-10-28 00:37:02.304 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - <==    Updates: 0
-2024-10-28 00:37:02.308 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@12477988]
-2024-10-28 00:37:02.309 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 306674056 to pool.
-2024-10-28 00:37:02.328 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.330 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.330 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.330 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.417 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.452 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:02.479 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1641027464.
-2024-10-28 00:37:02.480 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.deleteAllCustomers - ==>  Preparing: DELETE from Customer;
-2024-10-28 00:37:02.480 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.deleteAllCustomers - ==> Parameters: 
-2024-10-28 00:37:02.486 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.deleteAllCustomers - <==    Updates: 2
-2024-10-28 00:37:02.487 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@61d01788]
-2024-10-28 00:37:02.487 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1641027464 to pool.
-2024-10-28 00:37:02.501 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.501 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.501 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.502 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.576 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:02.599 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1738561265.
-2024-10-28 00:37:02.599 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.resetAutoIncrement - ==>  Preparing: ALTER TABLE Customer AUTO_INCREMENT = 1;
-2024-10-28 00:37:02.599 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.resetAutoIncrement - ==> Parameters: 
-2024-10-28 00:37:02.628 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.resetAutoIncrement - <==    Updates: 0
-2024-10-28 00:37:02.629 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@67a056f1]
-2024-10-28 00:37:02.629 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1738561265 to pool.
-2024-10-28 00:37:02.646 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.646 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.646 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.646 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.658 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.659 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.729 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:02.755 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 761680655.
-2024-10-28 00:37:02.755 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - ==>  Preparing: SET SQL_SAFE_UPDATES = ?;
-2024-10-28 00:37:02.756 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - ==> Parameters: 1(Integer)
-2024-10-28 00:37:02.756 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - <==    Updates: 0
-2024-10-28 00:37:02.756 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2d66530f]
-2024-10-28 00:37:02.756 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 761680655 to pool.
-2024-10-28 00:37:02.770 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.771 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.771 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.771 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.842 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.849 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:02.870 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 261838162.
-2024-10-28 00:37:02.871 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - ==>  Preparing: INSERT INTO Customer (user_name, password, first_name, last_name, phone, email, registration_date) VALUES ( ?, ?, ?, ?, ?, ?, ? )
-2024-10-28 00:37:02.878 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - ==> Parameters: JamesSmith(String), password123(String), James(String), Smith(String), 4748995503(String), james.smith@gmail.com(String), 2010-02-01(String)
-2024-10-28 00:37:02.883 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - <==    Updates: 1
-2024-10-28 00:37:02.896 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@f9b5552]
-2024-10-28 00:37:02.896 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 261838162 to pool.
-2024-10-28 00:37:02.912 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.912 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.913 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.913 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:02.949 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:02.970 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 369333979.
-2024-10-28 00:37:02.971 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
-2024-10-28 00:37:02.973 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
-2024-10-28 00:37:03.000 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
-2024-10-28 00:37:03.002 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
-2024-10-28 00:37:03.005 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
-2024-10-28 00:37:03.007 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@160396db]
-2024-10-28 00:37:03.007 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 369333979 to pool.
-2024-10-28 00:37:03.022 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.023 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.023 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.023 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.063 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.064 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.094 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.116 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1704600661.
-2024-10-28 00:37:03.117 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - ==>  Preparing: INSERT INTO Customer (user_name, password, first_name, last_name, phone, email, registration_date) VALUES ( ?, ?, ?, ?, ?, ?, ? )
-2024-10-28 00:37:03.120 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - ==> Parameters: MaryJohnson(String), password456(String), Mary(String), Johnson(String), 6234213337(String), mary.johnson@yahoo.com(String), 2011-06-10(String)
-2024-10-28 00:37:03.123 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - <==    Updates: 1
-2024-10-28 00:37:03.123 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@659a2455]
-2024-10-28 00:37:03.123 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1704600661 to pool.
-2024-10-28 00:37:03.132 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.132 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.132 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.132 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.175 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.195 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 219638321.
-2024-10-28 00:37:03.196 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
-2024-10-28 00:37:03.196 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
-2024-10-28 00:37:03.197 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
-2024-10-28 00:37:03.198 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, password456, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
-2024-10-28 00:37:03.200 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
-2024-10-28 00:37:03.200 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@d176a31]
-2024-10-28 00:37:03.200 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 219638321 to pool.
-2024-10-28 00:37:03.209 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.209 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.209 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.209 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.264 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.285 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2066366456.
-2024-10-28 00:37:03.285 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - ==>  Preparing: SET SQL_SAFE_UPDATES = ?;
-2024-10-28 00:37:03.286 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - ==> Parameters: 0(Integer)
-2024-10-28 00:37:03.286 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - <==    Updates: 0
-2024-10-28 00:37:03.286 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7b2a3ff8]
-2024-10-28 00:37:03.286 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 2066366456 to pool.
-2024-10-28 00:37:03.292 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.293 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.293 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.293 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.326 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.343 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 704387627.
-2024-10-28 00:37:03.344 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.deleteAllBranches - ==>  Preparing: DELETE from Branch;
-2024-10-28 00:37:03.344 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.deleteAllBranches - ==> Parameters: 
-2024-10-28 00:37:03.347 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.deleteAllBranches - <==    Updates: 3
-2024-10-28 00:37:03.347 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@29fc1a2b]
-2024-10-28 00:37:03.347 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 704387627 to pool.
-2024-10-28 00:37:03.354 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.355 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.355 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.355 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.392 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.407 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2078154554.
-2024-10-28 00:37:03.408 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.resetAutoIncrement - ==>  Preparing: ALTER TABLE Branch AUTO_INCREMENT = 1;
-2024-10-28 00:37:03.410 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.resetAutoIncrement - ==> Parameters: 
-2024-10-28 00:37:03.430 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.resetAutoIncrement - <==    Updates: 0
-2024-10-28 00:37:03.430 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7bde1f3a]
-2024-10-28 00:37:03.430 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 2078154554 to pool.
-2024-10-28 00:37:03.437 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.438 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.438 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.438 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.465 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.483 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 9843062.
-2024-10-28 00:37:03.483 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - ==>  Preparing: SET SQL_SAFE_UPDATES = ?;
-2024-10-28 00:37:03.484 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - ==> Parameters: 1(Integer)
-2024-10-28 00:37:03.485 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - <==    Updates: 0
-2024-10-28 00:37:03.486 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@963176]
-2024-10-28 00:37:03.486 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 9843062 to pool.
-2024-10-28 00:37:03.493 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.493 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.493 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.493 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.526 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.548 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1939869193.
-2024-10-28 00:37:03.548 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - ==>  Preparing: INSERT INTO Branch (branch_name, address, phone) VALUES ( ?, ?, ? )
-2024-10-28 00:37:03.550 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - ==> Parameters: Branch01(String), 108N Belair Rd, Evans, Georgia, 30809(String), 7068550483(String)
-2024-10-28 00:37:03.554 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - <==    Updates: 1
-2024-10-28 00:37:03.555 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@73a00e09]
-2024-10-28 00:37:03.555 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1939869193 to pool.
-2024-10-28 00:37:03.562 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.562 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.562 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.562 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.600 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.618 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 584157293.
-2024-10-28 00:37:03.619 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==>  Preparing: SELECT branch_id, branch_name, address, phone FROM Branch WHERE branch_id = ?
-2024-10-28 00:37:03.620 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==> Parameters: 1(Integer)
-2024-10-28 00:37:03.622 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==    Columns: branch_id, branch_name, address, phone
-2024-10-28 00:37:03.622 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==        Row: 1, Branch01, 108N Belair Rd, Evans, Georgia, 30809, 7068550483
-2024-10-28 00:37:03.623 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==      Total: 1
-2024-10-28 00:37:03.623 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@22d1886d]
-2024-10-28 00:37:03.623 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 584157293 to pool.
-2024-10-28 00:37:03.629 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.630 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.631 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.631 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.651 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.657 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.657 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.657 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.663 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.664 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.664 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.664 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.682 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.703 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1711641083.
-2024-10-28 00:37:03.703 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - ==>  Preparing: INSERT INTO Branch (branch_name, address, phone) VALUES ( ?, ?, ? )
-2024-10-28 00:37:03.705 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - ==> Parameters: Branch02(String), 9 Hartford Ave, West Springfield, MA 01089(String), 2535112433(String)
-2024-10-28 00:37:03.707 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - <==    Updates: 1
-2024-10-28 00:37:03.708 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@660591fb]
-2024-10-28 00:37:03.708 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1711641083 to pool.
-2024-10-28 00:37:03.711 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.712 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.712 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.712 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
-2024-10-28 00:37:03.730 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
-2024-10-28 00:37:03.745 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 734971558.
-2024-10-28 00:37:03.746 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==>  Preparing: SELECT branch_id, branch_name, address, phone FROM Branch WHERE branch_id = ?
-2024-10-28 00:37:03.746 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==> Parameters: 2(Integer)
-2024-10-28 00:37:03.748 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==    Columns: branch_id, branch_name, address, phone
-2024-10-28 00:37:03.749 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==        Row: 2, Branch02, 9 Hartford Ave, West Springfield, MA 01089, 2535112433
-2024-10-28 00:37:03.749 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==      Total: 1
-2024-10-28 00:37:03.750 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2bcec6a6]
-2024-10-28 00:37:03.750 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 734971558 to pool.
+2024-10-28 23:55:28.678 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2024-10-28 23:55:28.705 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:28.706 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:28.706 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:28.706 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:28.911 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:29.137 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1514955661.
+2024-10-28 23:55:29.143 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - ==>  Preparing: SET SQL_SAFE_UPDATES = ?;
+2024-10-28 23:55:29.208 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - ==> Parameters: 0(Integer)
+2024-10-28 23:55:29.210 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - <==    Updates: 0
+2024-10-28 23:55:29.212 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5a4c638d]
+2024-10-28 23:55:29.212 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1514955661 to pool.
+2024-10-28 23:55:29.238 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.239 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.239 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.239 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.332 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.364 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:29.388 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1241758568.
+2024-10-28 23:55:29.389 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.deleteAllCustomers - ==>  Preparing: DELETE from Customer;
+2024-10-28 23:55:29.390 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.deleteAllCustomers - ==> Parameters: 
+2024-10-28 23:55:29.394 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.deleteAllCustomers - <==    Updates: 1
+2024-10-28 23:55:29.395 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4a03bb68]
+2024-10-28 23:55:29.395 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1241758568 to pool.
+2024-10-28 23:55:29.416 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.416 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.416 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.417 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.488 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:29.518 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1456265041.
+2024-10-28 23:55:29.518 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.resetAutoIncrement - ==>  Preparing: ALTER TABLE Customer AUTO_INCREMENT = 1;
+2024-10-28 23:55:29.519 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.resetAutoIncrement - ==> Parameters: 
+2024-10-28 23:55:29.544 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.resetAutoIncrement - <==    Updates: 0
+2024-10-28 23:55:29.545 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@56ccd751]
+2024-10-28 23:55:29.545 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1456265041 to pool.
+2024-10-28 23:55:29.572 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.573 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.574 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.574 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.574 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.574 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.650 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:29.676 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 933646237.
+2024-10-28 23:55:29.676 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - ==>  Preparing: SET SQL_SAFE_UPDATES = ?;
+2024-10-28 23:55:29.677 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - ==> Parameters: 1(Integer)
+2024-10-28 23:55:29.677 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.setSafeUpdates - <==    Updates: 0
+2024-10-28 23:55:29.678 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@37a64f9d]
+2024-10-28 23:55:29.678 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 933646237 to pool.
+2024-10-28 23:55:29.692 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.692 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.692 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.692 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.755 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.765 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:29.789 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1423586012.
+2024-10-28 23:55:29.789 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - ==>  Preparing: INSERT INTO Customer (user_name, password, first_name, last_name, phone, email, registration_date) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2024-10-28 23:55:29.795 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - ==> Parameters: JamesSmith(String), password123(String), James(String), Smith(String), 4748995503(String), james.smith@gmail.com(String), 2010-02-01(String)
+2024-10-28 23:55:29.800 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - <==    Updates: 1
+2024-10-28 23:55:29.811 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@54da32dc]
+2024-10-28 23:55:29.811 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1423586012 to pool.
+2024-10-28 23:55:29.825 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.826 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.826 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.826 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.868 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:29.891 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 810169941.
+2024-10-28 23:55:29.891 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:29.894 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:29.924 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:29.926 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:29.930 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:29.932 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@304a3655]
+2024-10-28 23:55:29.932 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 810169941 to pool.
+2024-10-28 23:55:29.949 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.949 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.949 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:29.950 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.025 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.046 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1827371870.
+2024-10-28 23:55:30.047 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - ==>  Preparing: INSERT INTO Customer (user_name, password, first_name, last_name, phone, email, registration_date) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2024-10-28 23:55:30.050 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - ==> Parameters: MaryJohnson(String), password456(String), Mary(String), Johnson(String), 6234213337(String), mary.johnson@yahoo.com(String), 2011-06-10(String)
+2024-10-28 23:55:30.052 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.create - <==    Updates: 1
+2024-10-28 23:55:30.053 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6ceb7b5e]
+2024-10-28 23:55:30.053 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1827371870 to pool.
+2024-10-28 23:55:30.061 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.062 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.062 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.063 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.105 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.130 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 81269359.
+2024-10-28 23:55:30.130 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:30.131 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:30.134 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:30.135 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, password456, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:30.136 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:30.137 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4d8126f]
+2024-10-28 23:55:30.137 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 81269359 to pool.
+2024-10-28 23:55:30.148 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.148 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.148 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.149 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.207 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.231 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 142103421.
+2024-10-28 23:55:30.232 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - ==>  Preparing: SET SQL_SAFE_UPDATES = ?;
+2024-10-28 23:55:30.233 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - ==> Parameters: 0(Integer)
+2024-10-28 23:55:30.234 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - <==    Updates: 0
+2024-10-28 23:55:30.235 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@878537d]
+2024-10-28 23:55:30.235 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 142103421 to pool.
+2024-10-28 23:55:30.243 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.245 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.245 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.245 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.275 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.294 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1277678493.
+2024-10-28 23:55:30.294 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.deleteAllBranches - ==>  Preparing: DELETE from Branch;
+2024-10-28 23:55:30.294 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.deleteAllBranches - ==> Parameters: 
+2024-10-28 23:55:30.298 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.deleteAllBranches - <==    Updates: 2
+2024-10-28 23:55:30.298 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4c27d39d]
+2024-10-28 23:55:30.299 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1277678493 to pool.
+2024-10-28 23:55:30.303 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.303 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.303 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.303 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.341 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.359 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 979532928.
+2024-10-28 23:55:30.359 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.resetAutoIncrement - ==>  Preparing: ALTER TABLE Branch AUTO_INCREMENT = 1;
+2024-10-28 23:55:30.360 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.resetAutoIncrement - ==> Parameters: 
+2024-10-28 23:55:30.381 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.resetAutoIncrement - <==    Updates: 0
+2024-10-28 23:55:30.382 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@3a627c80]
+2024-10-28 23:55:30.383 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 979532928 to pool.
+2024-10-28 23:55:30.391 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.392 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.392 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.392 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.430 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.445 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 943659381.
+2024-10-28 23:55:30.448 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - ==>  Preparing: SET SQL_SAFE_UPDATES = ?;
+2024-10-28 23:55:30.449 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - ==> Parameters: 1(Integer)
+2024-10-28 23:55:30.449 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.setSafeUpdates - <==    Updates: 0
+2024-10-28 23:55:30.450 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@383f1975]
+2024-10-28 23:55:30.450 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 943659381 to pool.
+2024-10-28 23:55:30.456 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.457 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.458 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.458 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.482 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.483 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.483 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.484 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.485 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.485 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.485 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.485 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.529 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.558 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 836621476.
+2024-10-28 23:55:30.559 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - ==>  Preparing: INSERT INTO Branch (branch_name, address, phone) VALUES ( ?, ?, ? )
+2024-10-28 23:55:30.563 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - ==> Parameters: Branch01(String), 108N Belair Rd, Evans, Georgia, 30809(String), 7068550483(String)
+2024-10-28 23:55:30.565 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - <==    Updates: 1
+2024-10-28 23:55:30.566 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@31ddd4a4]
+2024-10-28 23:55:30.567 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 836621476 to pool.
+2024-10-28 23:55:30.570 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.570 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.570 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.570 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.596 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.622 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 183995527.
+2024-10-28 23:55:30.623 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==>  Preparing: SELECT branch_id, branch_name, address, phone FROM Branch WHERE branch_id = ?
+2024-10-28 23:55:30.623 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:30.625 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==    Columns: branch_id, branch_name, address, phone
+2024-10-28 23:55:30.625 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==        Row: 1, Branch01, 108N Belair Rd, Evans, Georgia, 30809, 7068550483
+2024-10-28 23:55:30.626 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==      Total: 1
+2024-10-28 23:55:30.626 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@af78c87]
+2024-10-28 23:55:30.627 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 183995527 to pool.
+2024-10-28 23:55:30.634 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.635 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.635 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.635 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.663 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.679 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1868987089.
+2024-10-28 23:55:30.679 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - ==>  Preparing: INSERT INTO Branch (branch_name, address, phone) VALUES ( ?, ?, ? )
+2024-10-28 23:55:30.680 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - ==> Parameters: Branch02(String), 9 Hartford Ave, West Springfield, MA 01089(String), 2535112433(String)
+2024-10-28 23:55:30.683 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.create - <==    Updates: 1
+2024-10-28 23:55:30.683 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6f667ad1]
+2024-10-28 23:55:30.683 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1868987089 to pool.
+2024-10-28 23:55:30.687 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.687 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.687 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.688 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.716 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.732 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1289563251.
+2024-10-28 23:55:30.732 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==>  Preparing: SELECT branch_id, branch_name, address, phone FROM Branch WHERE branch_id = ?
+2024-10-28 23:55:30.732 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:30.734 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==    Columns: branch_id, branch_name, address, phone
+2024-10-28 23:55:30.735 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==        Row: 2, Branch02, 9 Hartford Ave, West Springfield, MA 01089, 2535112433
+2024-10-28 23:55:30.735 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==      Total: 1
+2024-10-28 23:55:30.735 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4cdd2c73]
+2024-10-28 23:55:30.736 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1289563251 to pool.
+2024-10-28 23:55:30.741 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.742 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.742 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.742 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.762 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.784 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1929284175.
+2024-10-28 23:55:30.784 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:30.785 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:30.786 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:30.786 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:30.787 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:30.788 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@72fe8a4f]
+2024-10-28 23:55:30.788 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1929284175 to pool.
+2024-10-28 23:55:30.792 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.792 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.792 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.792 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.809 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.825 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 174383157.
+2024-10-28 23:55:30.825 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:30.826 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:30.827 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:30.828 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:30.828 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:30.829 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@a64e035]
+2024-10-28 23:55:30.829 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 174383157 to pool.
+2024-10-28 23:55:30.837 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.837 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.837 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.837 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.867 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.884 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 685219002.
+2024-10-28 23:55:30.885 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:30.885 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:30.887 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:30.887 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:30.887 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:30.888 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@28d79cba]
+2024-10-28 23:55:30.888 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 685219002 to pool.
+2024-10-28 23:55:30.894 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.894 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.894 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.894 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.930 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.935 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.936 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.936 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.936 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.937 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.940 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:30.956 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:30.980 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 45666436.
+2024-10-28 23:55:30.982 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:30.984 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:30.988 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:30.989 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:30.990 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:30.991 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2b8d084]
+2024-10-28 23:55:30.992 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 45666436 to pool.
+2024-10-28 23:55:31.000 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.002 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.003 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.003 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.020 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.043 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1087440001.
+2024-10-28 23:55:31.043 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.043 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:31.044 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.045 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:31.045 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.045 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@40d10481]
+2024-10-28 23:55:31.045 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1087440001 to pool.
+2024-10-28 23:55:31.056 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.056 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.056 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.056 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.073 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.090 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1802029863.
+2024-10-28 23:55:31.091 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.091 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:31.092 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.092 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, password456, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:31.092 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.099 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6b68cb27]
+2024-10-28 23:55:31.100 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1802029863 to pool.
+2024-10-28 23:55:31.104 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.104 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.104 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.104 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.120 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.130 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1373361892.
+2024-10-28 23:55:31.131 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==>  Preparing: SELECT branch_id, branch_name, address, phone FROM Branch WHERE branch_id = ?
+2024-10-28 23:55:31.131 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:31.132 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==    Columns: branch_id, branch_name, address, phone
+2024-10-28 23:55:31.132 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==        Row: 1, Branch01, 108N Belair Rd, Evans, Georgia, 30809, 7068550483
+2024-10-28 23:55:31.132 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.BranchMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.133 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@51dbd6e4]
+2024-10-28 23:55:31.133 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1373361892 to pool.
+2024-10-28 23:55:31.136 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.136 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.136 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.136 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.152 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.166 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1550080835.
+2024-10-28 23:55:31.167 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.168 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:31.170 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.170 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:31.170 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.170 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5c645b43]
+2024-10-28 23:55:31.170 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1550080835 to pool.
+2024-10-28 23:55:31.174 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.174 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.174 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.174 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.200 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.215 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 365864880.
+2024-10-28 23:55:31.216 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.216 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:31.217 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.217 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:31.218 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.218 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@15cea7b0]
+2024-10-28 23:55:31.218 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 365864880 to pool.
+2024-10-28 23:55:31.226 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.228 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.229 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.229 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.250 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.266 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1425433685.
+2024-10-28 23:55:31.266 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.267 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:31.268 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.268 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, password123, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:31.268 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.268 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@54f66455]
+2024-10-28 23:55:31.268 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1425433685 to pool.
+2024-10-28 23:55:31.270 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.271 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.271 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.271 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.287 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.302 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1809995046.
+2024-10-28 23:55:31.303 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==>  Preparing: UPDATE Customer SET password = ? WHERE customer_id = ?;
+2024-10-28 23:55:31.303 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==> Parameters: NewPassword(String), 1(Integer)
+2024-10-28 23:55:31.306 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - <==    Updates: 1
+2024-10-28 23:55:31.307 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6be25526]
+2024-10-28 23:55:31.307 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1809995046 to pool.
+2024-10-28 23:55:31.314 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.314 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.314 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.314 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.345 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.348 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.348 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.348 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.348 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.349 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.351 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.351 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.384 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.408 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1269339945.
+2024-10-28 23:55:31.408 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==>  Preparing: UPDATE Customer SET password = ? WHERE customer_id = ?;
+2024-10-28 23:55:31.409 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==> Parameters: NEWPASSWORD(String), 1(Integer)
+2024-10-28 23:55:31.411 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - <==    Updates: 1
+2024-10-28 23:55:31.411 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@4ba89729]
+2024-10-28 23:55:31.412 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1269339945 to pool.
+2024-10-28 23:55:31.417 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.417 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.417 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.417 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.438 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.452 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 424226973.
+2024-10-28 23:55:31.453 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.453 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:31.456 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.456 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, NEWPASSWORD, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:31.456 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.456 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1949309d]
+2024-10-28 23:55:31.456 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 424226973 to pool.
+2024-10-28 23:55:31.459 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.459 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.459 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.459 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.474 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.491 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 424209001.
+2024-10-28 23:55:31.491 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==>  Preparing: UPDATE Customer SET password = ? WHERE customer_id = ?;
+2024-10-28 23:55:31.492 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==> Parameters: NewPassword2(String), 1(Integer)
+2024-10-28 23:55:31.497 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - <==    Updates: 1
+2024-10-28 23:55:31.497 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@1948ea69]
+2024-10-28 23:55:31.497 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 424209001 to pool.
+2024-10-28 23:55:31.500 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.500 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.500 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.500 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.509 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.523 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 318288344.
+2024-10-28 23:55:31.523 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==>  Preparing: UPDATE Customer SET password = ? WHERE customer_id = ?;
+2024-10-28 23:55:31.524 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==> Parameters: NEWPASSWORD2(String), 1(Integer)
+2024-10-28 23:55:31.525 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - <==    Updates: 1
+2024-10-28 23:55:31.526 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@12f8b1d8]
+2024-10-28 23:55:31.526 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 318288344 to pool.
+2024-10-28 23:55:31.533 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.534 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.534 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.534 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.549 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.561 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 113416412.
+2024-10-28 23:55:31.561 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.562 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 1(Integer)
+2024-10-28 23:55:31.563 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.563 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 1, JamesSmith, NEWPASSWORD2, James, Smith, 4748995503, james.smith@gmail.com, 2010-02-01
+2024-10-28 23:55:31.564 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.564 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6c298dc]
+2024-10-28 23:55:31.564 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 113416412 to pool.
+2024-10-28 23:55:31.577 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.577 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.577 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.577 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.598 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.616 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 950125603.
+2024-10-28 23:55:31.616 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.616 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:31.617 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.618 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, password456, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:31.618 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.618 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@38a1c423]
+2024-10-28 23:55:31.618 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 950125603 to pool.
+2024-10-28 23:55:31.624 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.624 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.624 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.624 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.635 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.647 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1445222369.
+2024-10-28 23:55:31.647 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==>  Preparing: UPDATE Customer SET password = ? WHERE customer_id = ?;
+2024-10-28 23:55:31.647 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - ==> Parameters: NEWPASSWORD2(String), 2(Integer)
+2024-10-28 23:55:31.649 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePassword - <==    Updates: 1
+2024-10-28 23:55:31.649 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@562457e1]
+2024-10-28 23:55:31.649 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1445222369 to pool.
+2024-10-28 23:55:31.654 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.654 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.654 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.654 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.692 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.696 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.701 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.701 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.701 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.701 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.701 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.727 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.750 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1625428489.
+2024-10-28 23:55:31.756 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.758 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:31.760 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.761 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, NEWPASSWORD2, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:31.761 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.762 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@60e21209]
+2024-10-28 23:55:31.762 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1625428489 to pool.
+2024-10-28 23:55:31.769 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.769 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.769 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.769 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.786 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.800 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1913113425.
+2024-10-28 23:55:31.800 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.800 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:31.801 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.801 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, NEWPASSWORD2, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:31.802 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.804 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7207cb51]
+2024-10-28 23:55:31.804 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1913113425 to pool.
+2024-10-28 23:55:31.812 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.812 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.812 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.812 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.837 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.853 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1646234040.
+2024-10-28 23:55:31.853 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.854 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:31.854 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.855 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, NEWPASSWORD2, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:31.856 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.856 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@621f89b8]
+2024-10-28 23:55:31.856 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1646234040 to pool.
+2024-10-28 23:55:31.862 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.863 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.863 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.863 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.884 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.893 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1602288195.
+2024-10-28 23:55:31.894 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.894 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:31.895 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.895 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, NEWPASSWORD2, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:31.895 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.895 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5f80fa43]
+2024-10-28 23:55:31.896 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1602288195 to pool.
+2024-10-28 23:55:31.901 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.901 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.901 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.901 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.921 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.933 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 22790969.
+2024-10-28 23:55:31.933 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.934 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:31.934 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.934 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, NEWPASSWORD2, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:31.935 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.935 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@15bc339]
+2024-10-28 23:55:31.935 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 22790969 to pool.
+2024-10-28 23:55:31.940 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.940 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.940 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.941 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.957 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:31.969 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2126664214.
+2024-10-28 23:55:31.969 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:31.969 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:31.970 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:31.970 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, NEWPASSWORD2, Mary, Johnson, 6234213337, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:31.970 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:31.971 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@7ec25216]
+2024-10-28 23:55:31.971 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 2126664214 to pool.
+2024-10-28 23:55:31.973 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.973 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.973 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.973 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:31.986 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:32.003 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1395105902.
+2024-10-28 23:55:32.003 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - ==>  Preparing: UPDATE Customer SET phone = ? WHERE customer_id = ?;
+2024-10-28 23:55:32.004 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - ==> Parameters: 1111111111(String), 2(Integer)
+2024-10-28 23:55:32.009 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - <==    Updates: 1
+2024-10-28 23:55:32.009 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5327a06e]
+2024-10-28 23:55:32.010 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1395105902 to pool.
+2024-10-28 23:55:32.025 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.026 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.026 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.026 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.081 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:32.111 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1740797856.
+2024-10-28 23:55:32.111 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:32.112 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:32.113 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:32.113 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, NEWPASSWORD2, Mary, Johnson, 1111111111, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:32.114 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:32.115 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@67c277a0]
+2024-10-28 23:55:32.115 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1740797856 to pool.
+2024-10-28 23:55:32.128 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.129 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.129 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.129 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.141 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:32.157 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 582702662.
+2024-10-28 23:55:32.157 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:32.160 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:32.163 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:32.163 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, MaryJohnson, NEWPASSWORD2, Mary, Johnson, 1111111111, mary.johnson@yahoo.com, 2011-06-10
+2024-10-28 23:55:32.164 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:32.165 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@22bb5646]
+2024-10-28 23:55:32.165 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 582702662 to pool.
+2024-10-28 23:55:32.169 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.170 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.170 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.170 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.208 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.214 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.214 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.214 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.214 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.214 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.215 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.219 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.219 [Finalizer] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.220 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:32.239 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 345986913.
+2024-10-28 23:55:32.241 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateUserName - ==>  Preparing: UPDATE Customer SET user_name = ? WHERE customer_id = ?;
+2024-10-28 23:55:32.242 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateUserName - ==> Parameters: MaryJohnson(String), 2(Integer)
+2024-10-28 23:55:32.244 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateUserName - <==    Updates: 1
+2024-10-28 23:55:32.246 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - ==>  Preparing: UPDATE Customer SET phone = ? WHERE customer_id = ?;
+2024-10-28 23:55:32.246 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - ==> Parameters: 1111111111(String), 2(Integer)
+2024-10-28 23:55:32.247 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - <==    Updates: 1
+2024-10-28 23:55:32.248 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateEmail - ==>  Preparing: UPDATE Customer SET email = ? WHERE customer_id = ?;
+2024-10-28 23:55:32.248 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateEmail - ==> Parameters: mary.johnson@yahoo.com(String), 2(Integer)
+2024-10-28 23:55:32.248 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateEmail - <==    Updates: 1
+2024-10-28 23:55:32.248 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@149f5761]
+2024-10-28 23:55:32.248 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 345986913 to pool.
+2024-10-28 23:55:32.272 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.273 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.273 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.273 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.289 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:32.300 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1123862502.
+2024-10-28 23:55:32.301 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateUserName - ==>  Preparing: UPDATE Customer SET user_name = ? WHERE customer_id = ?;
+2024-10-28 23:55:32.301 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateUserName - ==> Parameters: NewUserName(String), 2(Integer)
+2024-10-28 23:55:32.303 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateUserName - <==    Updates: 1
+2024-10-28 23:55:32.304 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - ==>  Preparing: UPDATE Customer SET phone = ? WHERE customer_id = ?;
+2024-10-28 23:55:32.304 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - ==> Parameters: 1234567890(String), 2(Integer)
+2024-10-28 23:55:32.305 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updatePhone - <==    Updates: 1
+2024-10-28 23:55:32.305 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateEmail - ==>  Preparing: UPDATE Customer SET email = ? WHERE customer_id = ?;
+2024-10-28 23:55:32.305 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateEmail - ==> Parameters: new.email@gmail.com(String), 2(Integer)
+2024-10-28 23:55:32.306 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.updateEmail - <==    Updates: 1
+2024-10-28 23:55:32.306 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@42fcc7e6]
+2024-10-28 23:55:32.306 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1123862502 to pool.
+2024-10-28 23:55:32.309 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.309 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.309 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.309 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2024-10-28 23:55:32.324 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Opening JDBC Connection
+2024-10-28 23:55:32.336 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1653859230.
+2024-10-28 23:55:32.336 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==>  Preparing: SELECT customer_id, user_name, password, first_name, last_name, phone, email, registration_date FROM Customer WHERE customer_id = ?
+2024-10-28 23:55:32.337 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - ==> Parameters: 2(Integer)
+2024-10-28 23:55:32.338 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==    Columns: customer_id, user_name, password, first_name, last_name, phone, email, registration_date
+2024-10-28 23:55:32.338 [main] TRACE database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==        Row: 2, NewUserName, NEWPASSWORD2, Mary, Johnson, 1234567890, new.email@gmail.com, 2011-06-10
+2024-10-28 23:55:32.339 [main] DEBUG database.db_fifth_topic.bank.mybatis.mappers.CustomerMapper.findById - <==      Total: 1
+2024-10-28 23:55:32.339 [main] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@6293e39e]
+2024-10-28 23:55:32.339 [main] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource - Returned connection 1653859230 to pool.

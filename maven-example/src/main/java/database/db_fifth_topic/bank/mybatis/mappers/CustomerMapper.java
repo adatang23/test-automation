@@ -10,9 +10,13 @@ public interface CustomerMapper {
 
     Customer findById(Integer id);
 
+    void updateUserName(@Param("a") String userName, @Param("b") Integer customer_id);
+
     void updatePassword(@Param("a") String password, @Param("b") Integer customer_id);
 
     void updatePhone(@Param("a") String phone, @Param("b") Integer customer_id);
+
+    void updateEmail(@Param("a") String email, @Param("b") Integer customer_id);
 
     void resetAutoIncrement();
 

@@ -29,6 +29,11 @@
         SELECT COUNT(*) FROM Customer;
     </select>
 
+    <!--Update a customer's user_name by their ID -->
+    <update id="updateUserName">
+        UPDATE Customer SET user_name = #{a} WHERE customer_id = #{b};
+    </update>
+
     <!--Update a customer's password by their ID -->
     <update id="updatePassword">
         UPDATE Customer SET password = #{a} WHERE customer_id = #{b};
@@ -37,6 +42,11 @@
     <!--Update a customer's phone by their ID -->
     <update id="updatePhone">
         UPDATE Customer SET phone = #{a} WHERE customer_id = #{b};
+    </update>
+
+    <!--Update a customer's email by their ID -->
+    <update id="updateEmail">
+        UPDATE Customer SET email = #{a} WHERE customer_id = #{b};
     </update>
 
     <update id="setSafeUpdates" parameterType="Integer">

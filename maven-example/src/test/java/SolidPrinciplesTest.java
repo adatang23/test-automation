@@ -67,7 +67,6 @@ public class SolidPrinciplesTest {
         }
     };
 
-
     // Dependency Inversion principle
     private static Filter filterChecking = new Filter(AccountInterestType.CHECKING);
     private static Filter filterSaving = new Filter(AccountInterestType.SAVING);
@@ -95,7 +94,7 @@ public class SolidPrinciplesTest {
     };
 
     // Single responsibility principle
-    @Test(priority = 0, description = "Create a Customer1")
+    @Test(priority = 1, description = "Create a Customer1")
     public void createCustomerTest01() {
         CustomerCreateService customerCreateService = new CustomerCreateService();
         CustomerSelectService customerSelectService = new CustomerSelectService();
@@ -116,7 +115,7 @@ public class SolidPrinciplesTest {
     }
 
     // Open closed principle, CustomerCreate
-    @Test(priority = 1, description = "Create a Customer2")
+    @Test(priority = 2, description = "Create a Customer2")
     public void createCustomerTest02() {
         CustomerCreate customerCreate = new CustomerCreate();
         CustomerSelectService customerSelectService = new CustomerSelectService();
@@ -131,7 +130,7 @@ public class SolidPrinciplesTest {
     }
 
     // Liskov principle, CustomerListImpl
-    @Test(priority = 2, description = "Create a Customer3")
+    @Test(priority = 3, description = "Create a Customer3")
     public void createCustomerTest03() {
         CustomerListImpl customerList = new CustomerListImpl();
         customerList.add(CUSTOMER_3);
@@ -146,10 +145,9 @@ public class SolidPrinciplesTest {
         Assert.assertEquals(customer.getPassword(), CUSTOMER_3.getPassword(), "Password must match");
     }
 
-
     // Open closed principle, BranchCreate
-    @Test(priority = 3, description = "Create a Branch1")
-    public void createBranchTest03() {
+    @Test(priority = 4, description = "Create a Branch1")
+    public void createBranchTest04() {
         BranchCreate branchCreate = new BranchCreate();
         BranchService branchService = new BranchService();
         branchService.setSafeUpdates(0);
@@ -167,8 +165,8 @@ public class SolidPrinciplesTest {
     }
 
     // Liskov principle, BranchListImpl
-    @Test(priority = 4, description = "Create a Branch2")
-    public void createBranchTest04() {
+    @Test(priority = 5, description = "Create a Branch2")
+    public void createBranchTest05() {
         BranchListImpl branchList = new BranchListImpl();
         branchList.add(BRANCH_2);
         Branch branch = (Branch) branchList.get(BRANCH_2.getBranch_id());
@@ -183,8 +181,8 @@ public class SolidPrinciplesTest {
     }
 
     // Dependency Inversion principle, Filter, AccountTypeCreateService
-    @Test(priority = 5, description = "Create an AccountType1")
-    public void createAccountTypeTest04() {
+    @Test(priority = 6, description = "Create an AccountType1")
+    public void createAccountTypeTest06() {
         AccountTypeCreateService accountTypeCreateService = new AccountTypeCreateService();
         AccountTypeService accountTypeService = new AccountTypeService();
         accountTypeService.setSafeUpdates(0);
@@ -204,10 +202,9 @@ public class SolidPrinciplesTest {
                 "Interest rate must match");
     }
 
-
     // Dependency Inversion principle, Filter, AccountTypeCreateService
-    @Test(priority = 5, description = "Create an AccountType2")
-    public void createAccountTypeTest05() {
+    @Test(priority = 7, description = "Create an AccountType2")
+    public void createAccountTypeTest07() {
         AccountTypeCreateService accountTypeCreateService = new AccountTypeCreateService();
         AccountTypeService accountTypeService = new AccountTypeService();
         accountTypeCreateService.create(ACCOUNT_TYPE_2);
@@ -224,8 +221,8 @@ public class SolidPrinciplesTest {
     }
 
     // Dependency Inversion principle, Filter, AccountTypeCreateService
-    @Test(priority = 6, description = "Create an AccountType3")
-    public void createAccountTypeTest06() {
+    @Test(priority = 8, description = "Create an AccountType3")
+    public void createAccountTypeTest08() {
         AccountTypeCreateService accountTypeCreateService = new AccountTypeCreateService();
         AccountTypeService accountTypeService = new AccountTypeService();
         accountTypeCreateService.create(ACCOUNT_TYPE_3);
@@ -241,20 +238,18 @@ public class SolidPrinciplesTest {
                 "Interest rate must match");
     }
 
-
     // Single responsibility principle
-    @Test(priority = 7, description = "Select the Customer1")
-    public void selectCustomerTest07() {
+    @Test(priority = 9, description = "Select the Customer1")
+    public void selectCustomerTest09() {
         CustomerSelectService customerSelectService = new CustomerSelectService();
         Customer customer = customerSelectService.getCustomer(CUSTOMER_1.getCustomer_id());
         System.out.println("Customer successfully found, customer_id: " + customer.getCustomer_id()
                 + " Customer name: " + customer.getUser_name());
     }
 
-
     // Interface segregation principle, CustomerUpdate
     @Test(priority = 10, description = "Update the Customer1's password")
-    public void updateCustomerPasswordTest11() {
+    public void updateCustomerPasswordTest10() {
         CustomerUpdate customerUpdate = new CustomerUpdate();
         CustomerSelectService customerSelectService = new CustomerSelectService();
         Customer customer = customerSelectService.getCustomer(CUSTOMER_1.getCustomer_id());
@@ -288,7 +283,7 @@ public class SolidPrinciplesTest {
 
     // Interface segregation principle, BranchUpdate
     @Test(priority = 12, description = "Update the Branch1's phone")
-    public void updateBranchPhoneTest11() {
+    public void updateBranchPhoneTest12() {
         BranchUpdate branchUpdate = new BranchUpdate();
         BranchService branchService = new BranchService();
         Branch branch = branchService.getBranch(BRANCH_1.getBranch_id());
@@ -303,10 +298,9 @@ public class SolidPrinciplesTest {
                 "Phone must match");
     }
 
-
     // Single responsibility principle
-    @Test(priority = 15, description = "Delete the Customer1")
-    public void deleteCustomerTest16() {
+    @Test(priority = 13, description = "Delete the Customer1")
+    public void deleteCustomerTest13() {
         CustomerSelectService customerSelectService = new CustomerSelectService();
         CustomerDeleteService customerDeleteService = new CustomerDeleteService();
         Customer customer = customerSelectService.getCustomer(CUSTOMER_1.getCustomer_id());
@@ -318,8 +312,8 @@ public class SolidPrinciplesTest {
     }
 
     // Single responsibility principle
-    @Test(priority = 16, description = "Delete the Customer2")
-    public void deleteCustomerTest17() {
+    @Test(priority = 14, description = "Delete the Customer2")
+    public void deleteCustomerTest14() {
         CustomerSelectService customerSelectService = new CustomerSelectService();
         CustomerDeleteService customerDeleteService = new CustomerDeleteService();
         Customer customer = customerSelectService.getCustomer(CUSTOMER_2.getCustomer_id());

@@ -12,9 +12,9 @@ CREATE TABLE `User` (
 `phone` varchar(45) NOT NULL,
 `email` varchar(45) NOT NULL,
 `credit_score` int NOT NULL DEFAULT 300,
-`income` decimal(10,2) NOT NULL CHECK(`income` >= 0),
+`annual_income` decimal(10,2) NOT NULL CHECK(`annual_income` >= 0),
 `loan_amount` decimal(10,2) NOT NULL DEFAULT 0.00,
-`registration_date` date NOT NULL DEFAULT (CURRENT_DATE),
+`registration_date` date NOT NULL DEFAULT '2024-10-30',
 PRIMARY KEY (`user_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -32,22 +32,20 @@ CREATE TABLE `LoanApplication` (
 `user_id` int NOT NULL,
 `loan_type` varchar(45) NOT NULL,
 `amount` decimal(10,2) NOT NULL CHECK(`amount` >= 0),
-`start_date` date NOT NULL DEFAULT (CURRENT_DATE),
+`start_date` date NOT NULL DEFAULT '2024-10-30',
 `end_date` date NOT NULL DEFAULT '2025-12-31',
 `application_status` varchar(45) NOT NULL DEFAULT 'pending' CHECK(`application_status` IN ('pending', 'declined', 'approved')),
-`application_date` date NOT NULL DEFAULT (CURRENT_DATE),
+`application_date` date NOT NULL DEFAULT '2024-10-30',
 PRIMARY KEY(`application_id`),
 CONSTRAINT `fk_loan_application_user_id` FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `Transaction` (
 `transaction_id` int NOT NULL AUTO_INCREMENT,
+`account_id` int NOT NULL,
 `transaction_type` varchar(45) NOT NULL CHECK(`transaction_type` IN ('deposit', 'withdrawal')),
 `transaction_amount` decimal(10,2) NOT NULL DEFAULT 0,
-`transaction_date` date NOT NULL DEFAULT (CURRENT_DATE),
-`from_account_id` int NOT NULL,
-`to_account_id` int NOT NULL,
+`transaction_date` date NOT NULL DEFAULT '2024-10-30',
 PRIMARY KEY(`transaction_id`),
-CONSTRAINT `fk_transaction_from_account_id` FOREIGN KEY (`from_account_id`) REFERENCES `Account` (`account_id`),
-CONSTRAINT `fk_transaction_to_account_id` FOREIGN KEY (`to_account_id`) REFERENCES `Account` (`account_id`)
+CONSTRAINT `fk_transaction_account_id` FOREIGN KEY (`account_id`) REFERENCES `Account` (`account_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

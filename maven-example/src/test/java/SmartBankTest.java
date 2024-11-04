@@ -166,6 +166,15 @@ public class SmartBankTest {
         }
     };
 
+    private static final Transaction TRANSACTION_4 = new Transaction() {
+        {
+            setAccount_id(1);
+            setTransaction_type("withdrawal");
+            setTransaction_amount(200000);
+            setTransaction_date("2024-07-20");
+        }
+    };
+
 
     // Start Testing:
     // Create/Insert of CRUD
@@ -409,6 +418,8 @@ public class SmartBankTest {
         transactionService.createTransaction(TRANSACTION_1);
         Transaction transaction = transactionService.getTransaction(TRANSACTION_1.getTransaction_id());
         System.out.println("Transaction successfully created: " + transaction.getTransaction_id());
+        System.out.println("Account_balance_before: " + transaction.getAccount_balance_before());
+        System.out.println("Account_balance_after: " + transaction.getAccount_balance_after());
         checkTransaction01(transaction);
     }
 
@@ -430,6 +441,8 @@ public class SmartBankTest {
         transactionService.createTransaction(TRANSACTION_2);
         Transaction transaction = transactionService.getTransaction(TRANSACTION_2.getTransaction_id());
         System.out.println("Transaction successfully created: " + transaction.getTransaction_id());
+        System.out.println("Account_balance_before: " + transaction.getAccount_balance_before());
+        System.out.println("Account_balance_after: " + transaction.getAccount_balance_after());
         checkTransaction02(transaction);
     }
 
@@ -451,6 +464,8 @@ public class SmartBankTest {
         transactionService.createTransaction(TRANSACTION_3);
         Transaction transaction = transactionService.getTransaction(TRANSACTION_3.getTransaction_id());
         System.out.println("Transaction successfully created: " + transaction.getTransaction_id());
+        System.out.println("Account_balance_before: " + transaction.getAccount_balance_before());
+        System.out.println("Account_balance_after: " + transaction.getAccount_balance_after());
         checkTransaction03(transaction);
     }
 
@@ -462,6 +477,106 @@ public class SmartBankTest {
         Assert.assertEquals(transaction.getTransaction_date(), TRANSACTION_3.getTransaction_date(),
                 "Transaction Date must match");
     }
+
+    @Test (priority = 15, description = "Create a Transaction4")
+    public void createTransactionTest15() throws SQLException {
+        //Create a DAOFactory instance for MySQL
+        DAOFactory mySQLFactory = DAOFactory.getDAOFactory(ProjectConstant.MYSQL);
+        TransactionService transactionService = new TransactionService(mySQLFactory);
+        System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
+        transactionService.createTransaction(TRANSACTION_4);
+    }
+
+
+
+
+
+
+    // Update User information
+
+    // Update Account information
+
+    // Update LoanApplication status
+    @Test (priority = 16, description = "Update LoanApplication1")
+    public void updateLoanApplicationStatusTest16() throws SQLException {
+        //Create a DAOFactory instance for MySQL
+        DAOFactory mySQLFactory = DAOFactory.getDAOFactory(ProjectConstant.MYSQL);
+        LoanApplicationService loanApplicationService = new LoanApplicationService(mySQLFactory);
+        System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
+        LoanApplication loanApplication
+                = loanApplicationService.getLoanApplication(LOAN_APPLICATION_1.getApplication_id());
+        loanApplicationService.updateApplicationStatus(loanApplication);
+        LoanApplication updatedloanApplication
+                = loanApplicationService.getLoanApplication(LOAN_APPLICATION_1.getApplication_id());
+        System.out.println("Loan application status updated: " + updatedloanApplication.getApplication_status());
+        Assert.assertEquals(updatedloanApplication.getApplication_id(), loanApplication.getApplication_id(),
+                "Loan Application id must match");
+        Assert.assertEquals(updatedloanApplication.getAmount(), loanApplication.getAmount(),
+                "Loan Amount must match");
+        Assert.assertNotEquals(updatedloanApplication.getApplication_status(), loanApplication.getApplication_status(),
+                "Loan Application Status must update");
+    }
+
+    @Test (priority = 17, description = "Update LoanApplication2")
+    public void updateLoanApplicationStatusTest17() throws SQLException {
+        //Create a DAOFactory instance for MySQL
+        DAOFactory mySQLFactory = DAOFactory.getDAOFactory(ProjectConstant.MYSQL);
+        LoanApplicationService loanApplicationService = new LoanApplicationService(mySQLFactory);
+        System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
+        LoanApplication loanApplication
+                = loanApplicationService.getLoanApplication(LOAN_APPLICATION_2.getApplication_id());
+        loanApplicationService.updateApplicationStatus(loanApplication);
+        LoanApplication updatedloanApplication
+                = loanApplicationService.getLoanApplication(LOAN_APPLICATION_2.getApplication_id());
+        System.out.println("Loan application status updated: " + updatedloanApplication.getApplication_status());
+        Assert.assertEquals(updatedloanApplication.getApplication_id(), loanApplication.getApplication_id(),
+                "Loan Application id must match");
+        Assert.assertEquals(updatedloanApplication.getAmount(), loanApplication.getAmount(),
+                "Loan Amount must match");
+        Assert.assertNotEquals(updatedloanApplication.getApplication_status(), loanApplication.getApplication_status(),
+                "Loan Application Status must update");
+    }
+
+    @Test (priority = 18, description = "Update LoanApplication3")
+    public void updateLoanApplicationStatusTest18() throws SQLException {
+        //Create a DAOFactory instance for MySQL
+        DAOFactory mySQLFactory = DAOFactory.getDAOFactory(ProjectConstant.MYSQL);
+        LoanApplicationService loanApplicationService = new LoanApplicationService(mySQLFactory);
+        System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
+        LoanApplication loanApplication
+                = loanApplicationService.getLoanApplication(LOAN_APPLICATION_3.getApplication_id());
+        loanApplicationService.updateApplicationStatus(loanApplication);
+        LoanApplication updatedloanApplication
+                = loanApplicationService.getLoanApplication(LOAN_APPLICATION_3.getApplication_id());
+        System.out.println("Loan application status updated: " + updatedloanApplication.getApplication_status());
+        Assert.assertEquals(updatedloanApplication.getApplication_id(), loanApplication.getApplication_id(),
+                "Loan Application id must match");
+        Assert.assertEquals(updatedloanApplication.getAmount(), loanApplication.getAmount(),
+                "Loan Amount must match");
+        Assert.assertNotEquals(updatedloanApplication.getApplication_status(), loanApplication.getApplication_status(),
+                "Loan Application Status must update");
+    }
+
+    @Test (priority = 19, description = "Update LoanApplication4")
+    public void updateLoanApplicationStatusTest19() throws SQLException {
+        //Create a DAOFactory instance for MySQL
+        DAOFactory mySQLFactory = DAOFactory.getDAOFactory(ProjectConstant.MYSQL);
+        LoanApplicationService loanApplicationService = new LoanApplicationService(mySQLFactory);
+        System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
+        LoanApplication loanApplication
+                = loanApplicationService.getLoanApplication(LOAN_APPLICATION_4.getApplication_id());
+        loanApplicationService.updateApplicationStatus(loanApplication);
+        LoanApplication updatedloanApplication
+                = loanApplicationService.getLoanApplication(LOAN_APPLICATION_4.getApplication_id());
+        System.out.println("Loan application status updated: " + updatedloanApplication.getApplication_status());
+        Assert.assertEquals(updatedloanApplication.getApplication_id(), loanApplication.getApplication_id(),
+                "Loan Application id must match");
+        Assert.assertEquals(updatedloanApplication.getAmount(), loanApplication.getAmount(),
+                "Loan Amount must match");
+        Assert.assertNotEquals(updatedloanApplication.getApplication_status(), loanApplication.getApplication_status(),
+                "Loan Application Status must update");
+    }
+
 
     @Test(priority = 30, description = "Delete all Transactions")
     public void deleteAllTransactionsTest30() throws SQLException {

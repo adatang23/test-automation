@@ -2,11 +2,10 @@ package projects.first_topic.smart_bank_app.model;
 
 public class Transaction {
     private Integer transaction_id;
+    private Integer account_id;
     private String transaction_type;
     private double transaction_amount;
     private String transaction_date;
-    private Integer from_account_id;
-    private Integer to_account_id;
 
     public Transaction() {
     }
@@ -18,6 +17,10 @@ public class Transaction {
     public void setTransaction_id(Integer transaction_id) {
         this.transaction_id = transaction_id;
     }
+
+    public Integer getAccount_id() { return account_id; }
+
+    public void setAccount_id(Integer account_id) { this.account_id = account_id; }
 
     public String getTransaction_type() {
         return transaction_type;
@@ -43,19 +46,4 @@ public class Transaction {
         this.transaction_date = transaction_date;
     }
 
-    public Integer getFrom_account_id() {
-        return from_account_id;
-    }
-
-    public void setFrom_account_id(Integer from_account_id) {
-        this.from_account_id = from_account_id;
-    }
-
-    public Integer getTo_account_id() {
-        return to_account_id;
-    }
-
-    public void setTo_account_id(Integer to_account_id) {
-        this.to_account_id = to_account_id;
-    }
 }

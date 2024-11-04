@@ -35,7 +35,6 @@ public class MySQLAccountManager implements IAccountManagement {
         } catch (SQLException e) {
             throw new SQLException(e);
         }
-
     }
 
     @Override

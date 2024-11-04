@@ -25,7 +25,7 @@ public class TransactionService {
     }
 
 
-    public void deleteAllTransactionss() throws SQLException {
+    public void deleteAllTransactions() throws SQLException {
         iTransactionManagement.deleteAllTransactions();
     }
 

@@ -15,8 +15,8 @@ public class MySQLTransactionManager implements ITransactionManagement {
         if (transaction.getTransaction_id() != null) {
             throw new IllegalArgumentException("Transaction is already created, the transaction_id is not null.");
         }
-        Object[] values = {transaction.getTransaction_type(), transaction.getTransaction_amount(),
-                transaction.getTransaction_date(), transaction.getFrom_account_id(), transaction.getTo_account_id()};
+        Object[] values = {transaction.getAccount_id(), transaction.getTransaction_type(),
+                transaction.getTransaction_amount(), transaction.getTransaction_date()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement
                      = preparedStatement(connection, SQL_INSERT_TRANSACTION, true, values)) {
@@ -60,11 +60,10 @@ public class MySQLTransactionManager implements ITransactionManagement {
     private Transaction getTransactionFromResultSet(ResultSet resultSet) throws SQLException {
         Transaction transaction = new Transaction();
         transaction.setTransaction_id(resultSet.getInt("transaction_id"));
+        transaction.setAccount_id(resultSet.getInt("account_id"));
         transaction.setTransaction_type(resultSet.getString("transaction_type"));
         transaction.setTransaction_amount(resultSet.getDouble("transaction_amount"));
         transaction.setTransaction_date(resultSet.getString("transaction_date"));
-        transaction.setFrom_account_id(resultSet.getInt("from_account_id"));
-        transaction.setTo_account_id(resultSet.getInt("to_account_id"));
         return transaction;
     }
 

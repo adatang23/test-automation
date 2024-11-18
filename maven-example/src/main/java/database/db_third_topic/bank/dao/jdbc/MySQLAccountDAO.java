@@ -12,18 +12,18 @@ import database.db_third_topic.bank.model.Account;
 public class MySQLAccountDAO implements AccountDAO {
     @Override
     public void create(Account account) throws SQLException {
-        if (account.getAccount_id() != null) {
+        if (account.getAccountId() != null) {
             throw new IllegalArgumentException("Account is already created, the account_id is not null.");
         }
-        Object[] values = {account.getUser_id(), account.getAccount_opened(), account.getType_id(),
-                account.getBalance(), account.getBranch_id()};
+        Object[] values = {account.getUserId(), account.getAccountOpened(), account.getTypeId(),
+                account.getBalance(), account.getBranchId()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement
                      = preparedStatement(connection, SQL_INSERT_ACCOUNT, true, values)) {
             statement.executeUpdate();
             try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    account.setAccount_id(generatedKeys.getInt(1));
+                    account.setAccountId(generatedKeys.getInt(1));
                     System.out.println("Successfully Inserted account_id " + generatedKeys.getInt(1));
                 } else {
                     throw new DAOException("Creating account failed, no generated key obtained.");
@@ -36,10 +36,10 @@ public class MySQLAccountDAO implements AccountDAO {
 
     @Override
     public void updateAccountBalance(Account account, Double balance) throws SQLException {
-        if (account.getAccount_id() == null) {
+        if (account.getAccountId() == null) {
             throw new IllegalArgumentException("Account does not existed.");
         }
-        Object[] values = {balance, account.getAccount_id()};
+        Object[] values = {balance, account.getAccountId()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement
                      = preparedStatement(connection, SQL_UPDATE_ACCOUNT_BALANCE, false, values)) {
@@ -88,7 +88,7 @@ public class MySQLAccountDAO implements AccountDAO {
 
     @Override
     public void deleteAccount(Account account) throws SQLException {
-        Object[] values = {account.getAccount_id()};
+        Object[] values = {account.getAccountId()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement = preparedStatement(connection, SQL_DELETE_ACCOUNT,
                      false, values)) {
@@ -121,12 +121,12 @@ public class MySQLAccountDAO implements AccountDAO {
      */
     private Account getAccountFromResultSet(ResultSet resultSet) throws SQLException {
         Account account = new Account();
-        account.setAccount_id(resultSet.getInt("account_id"));
-        account.setUser_id(resultSet.getInt("user_id"));
-        account.setAccount_opened(resultSet.getString("account_opened"));
-        account.setType_id(resultSet.getInt("type_id"));
+        account.setAccountId(resultSet.getInt("account_id"));
+        account.setUserId(resultSet.getInt("user_id"));
+        account.setAccountOpened(resultSet.getString("account_opened"));
+        account.setTypeId(resultSet.getInt("type_id"));
         account.setBalance(resultSet.getDouble("balance"));
-        account.setBranch_id(resultSet.getInt("branch_id"));
+        account.setBranchId(resultSet.getInt("branch_id"));
         return account;
     }
 }

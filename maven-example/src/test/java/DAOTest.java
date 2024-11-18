@@ -12,31 +12,31 @@ import java.sql.SQLException;
 public class DAOTest {
     private static final Customer CUSTOMER_1 = new Customer() {
         {
-            setUser_name("JamesSmith");
+            setUserName("JamesSmith");
             setPassword("password123");
-            setFirst_name("James");
-            setLast_name("Smith");
+            setFirstName("James");
+            setLastName("Smith");
             setPhone("4748995503");
             setEmail("james.smith@gmail.com");
-            setRegistration_date("2010-02-01");
+            setRegistrationDate("2010-02-01");
         }
     };
 
     private static final Customer CUSTOMER_2 = new Customer() {
         {
-            setUser_name("MaryJohnson");
+            setUserName("MaryJohnson");
             setPassword("password456");
-            setFirst_name("Mary");
-            setLast_name("Johnson");
+            setFirstName("Mary");
+            setLastName("Johnson");
             setPhone("6234213337");
             setEmail("mary.johnson@yahoo.com");
-            setRegistration_date("2011-06-10");
+            setRegistrationDate("2011-06-10");
         }
     };
 
     private static final Branch BRANCH = new Branch() {
         {
-            setBranch_name("Branch01");
+            setBranchName("Branch01");
             setAddress("108N Belair Rd, Evans, Georgia, 30809");
             setPhone("7068550483");
         }
@@ -44,28 +44,28 @@ public class DAOTest {
 
     private static final AccountType ACCOUNT_TYPE = new AccountType() {
         {
-            setAccount_type_name("Checking");
-            setInterest_rate(0.01);
+            setAccountTypeName("Checking");
+            setInterestRate(0.01);
         }
     };
 
     private static final Account ACCOUNT_1 = new Account() {
         {
-            setUser_id(1);
-            setAccount_opened("2010-02-01");
-            setType_id(1);
+            setUserId(1);
+            setAccountOpened("2010-02-01");
+            setTypeId(1);
             setBalance(50000.0);
-            setBranch_id(1);
+            setBranchId(1);
         }
     };
 
     private static final Account ACCOUNT_2 = new Account() {
         {
-            setUser_id(2);
-            setAccount_opened("2011-06-10");
-            setType_id(1);
+            setUserId(2);
+            setAccountOpened("2011-06-10");
+            setTypeId(1);
             setBalance(82000.0);
-            setBranch_id(1);
+            setBranchId(1);
         }
     };
 
@@ -82,12 +82,12 @@ public class DAOTest {
         customerService.setSafeUpdates(1);
         customerService.resetAutoIncrement();
         customerService.createCustomer(CUSTOMER_1);
-        System.out.println("User successfully created: " + CUSTOMER_1.getUser_name());
-        checkCustomer01(customerService.getCustomer(CUSTOMER_1.getCustomer_id()));
+        System.out.println("User successfully created: " + CUSTOMER_1.getUserName());
+        checkCustomer01(customerService.getCustomer(CUSTOMER_1.getCustomerId()));
     }
 
     private void checkCustomer01(Customer customer) {
-        Assert.assertEquals(customer.getUser_name(), CUSTOMER_1.getUser_name(), "User name must match");
+        Assert.assertEquals(customer.getUserName(), CUSTOMER_1.getUserName(), "User name must match");
         Assert.assertEquals(customer.getPassword(), CUSTOMER_1.getPassword(), "Password must match");
         Assert.assertEquals(customer.getEmail(), CUSTOMER_1.getEmail(), "Email must match");
     }
@@ -99,12 +99,12 @@ public class DAOTest {
         CustomerService customerService = new CustomerService(mySQLFactory);
         System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
         customerService.createCustomer(CUSTOMER_2);
-        System.out.println("User successfully created: " + CUSTOMER_2.getUser_name());
-        checkCustomer02(customerService.getCustomer(CUSTOMER_2.getCustomer_id()));
+        System.out.println("User successfully created: " + CUSTOMER_2.getUserName());
+        checkCustomer02(customerService.getCustomer(CUSTOMER_2.getCustomerId()));
     }
 
     private void checkCustomer02(Customer customer) {
-        Assert.assertEquals(customer.getUser_name(), CUSTOMER_2.getUser_name(), "User name must match");
+        Assert.assertEquals(customer.getUserName(), CUSTOMER_2.getUserName(), "User name must match");
         Assert.assertEquals(customer.getPassword(), CUSTOMER_2.getPassword(), "Password must match");
         Assert.assertEquals(customer.getEmail(), CUSTOMER_2.getEmail(), "Email must match");
     }
@@ -120,12 +120,12 @@ public class DAOTest {
         branchService.setSafeUpdates(1);
         branchService.resetAutoIncrement();
         branchService.createBranch(BRANCH);
-        System.out.println("Branch successfully created: " + BRANCH.getBranch_name());
-        checkBranch(branchService.getBranch(BRANCH.getBranch_id()));
+        System.out.println("Branch successfully created: " + BRANCH.getBranchName());
+        checkBranch(branchService.getBranch(BRANCH.getBranchId()));
     }
 
     private void checkBranch(Branch branch) {
-        Assert.assertEquals(branch.getBranch_name(), BRANCH.getBranch_name(), "Branch name must match");
+        Assert.assertEquals(branch.getBranchName(), BRANCH.getBranchName(), "Branch name must match");
         Assert.assertEquals(branch.getAddress(), BRANCH.getAddress(), "Address must match");
         Assert.assertEquals(branch.getPhone(), BRANCH.getPhone(), "Phone must match");
     }
@@ -141,14 +141,14 @@ public class DAOTest {
         accountTypeService.setSafeUpdates(1);
         accountTypeService.resetAutoIncrement();
         accountTypeService.createAccountType(ACCOUNT_TYPE);
-        System.out.println("Account Type successfully created: " + ACCOUNT_TYPE.getAccount_type_name());
-        checkAccountType(accountTypeService.getAccountType(ACCOUNT_TYPE.getAccount_type_id()));
+        System.out.println("Account Type successfully created: " + ACCOUNT_TYPE.getAccountTypeName());
+        checkAccountType(accountTypeService.getAccountType(ACCOUNT_TYPE.getAccountTypeId()));
     }
 
     private void checkAccountType(AccountType accountType) {
-        Assert.assertEquals(accountType.getAccount_type_name(), ACCOUNT_TYPE.getAccount_type_name(),
+        Assert.assertEquals(accountType.getAccountTypeName(), ACCOUNT_TYPE.getAccountTypeName(),
                 "Account name must match");
-        Assert.assertEquals(accountType.getInterest_rate(), ACCOUNT_TYPE.getInterest_rate(),
+        Assert.assertEquals(accountType.getInterestRate(), ACCOUNT_TYPE.getInterestRate(),
                 "Interest Rate must match");
     }
 
@@ -163,14 +163,14 @@ public class DAOTest {
         accountService.setSafeUpdates(1);
         accountService.resetAutoIncrement();
         accountService.createAccount(ACCOUNT_1);
-        System.out.println("Account successfully created with account_id: " + ACCOUNT_1.getAccount_id());
-        checkAccount01(accountService.getAccount(ACCOUNT_1.getAccount_id()));
+        System.out.println("Account successfully created with account_id: " + ACCOUNT_1.getAccountId());
+        checkAccount01(accountService.getAccount(ACCOUNT_1.getAccountId()));
     }
 
     private void checkAccount01(Account account) {
-        Assert.assertEquals(account.getAccount_opened(), ACCOUNT_1.getAccount_opened(),
+        Assert.assertEquals(account.getAccountOpened(), ACCOUNT_1.getAccountOpened(),
                 "Account open date must match");
-        Assert.assertEquals(account.getUser_id(), ACCOUNT_1.getUser_id(), "User id must match");
+        Assert.assertEquals(account.getUserId(), ACCOUNT_1.getUserId(), "User id must match");
         Assert.assertEquals(account.getBalance(), ACCOUNT_1.getBalance(), "Balance must match");
     }
 
@@ -181,14 +181,14 @@ public class DAOTest {
         AccountService accountService = new AccountService(mySQLFactory);
         System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
         accountService.createAccount(ACCOUNT_2);
-        System.out.println("Account successfully created with account_id: " + ACCOUNT_2.getAccount_id());
-        checkAccount02(accountService.getAccount(ACCOUNT_2.getAccount_id()));
+        System.out.println("Account successfully created with account_id: " + ACCOUNT_2.getAccountId());
+        checkAccount02(accountService.getAccount(ACCOUNT_2.getAccountId()));
     }
 
     private void checkAccount02(Account account) {
-        Assert.assertEquals(account.getAccount_opened(), ACCOUNT_2.getAccount_opened(),
+        Assert.assertEquals(account.getAccountOpened(), ACCOUNT_2.getAccountOpened(),
                 "Account open date must match");
-        Assert.assertEquals(account.getUser_id(), ACCOUNT_2.getUser_id(), "User id must match");
+        Assert.assertEquals(account.getUserId(), ACCOUNT_2.getUserId(), "User id must match");
         Assert.assertEquals(account.getBalance(), ACCOUNT_2.getBalance(), "Balance must match");
     }
 
@@ -199,8 +199,8 @@ public class DAOTest {
         CustomerService customerService = new CustomerService(mySQLFactory);
         System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
         Customer customer = customerService.getCustomer(1);
-        System.out.println("User successfully found, customer_id: " + customer.getCustomer_id()
-                + " User name: " + customer.getUser_name());
+        System.out.println("User successfully found, customer_id: " + customer.getCustomerId()
+                + " User name: " + customer.getUserName());
     }
 
     @Test(priority = 7, description = "Select a branch with branch_id=1")
@@ -209,8 +209,8 @@ public class DAOTest {
         BranchService branchService = new BranchService(mySQLFactory);
         System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
         Branch branch = branchService.getBranch(1);
-        System.out.println("Branch successfully found, customer_id: " + branch.getBranch_id()
-                + " Branch name: " + branch.getBranch_name());
+        System.out.println("Branch successfully found, customer_id: " + branch.getBranchId()
+                + " Branch name: " + branch.getBranchName());
     }
 
     @Test(priority = 8, description = "Select an account type with account_type_id=1")
@@ -219,8 +219,8 @@ public class DAOTest {
         AccountTypeService accountTypeService = new AccountTypeService(mySQLFactory);
         System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
         AccountType accountType = accountTypeService.getAccountType(1);
-        System.out.println("Account Type successfully found, account_type_id: " + accountType.getAccount_type_id()
-                + " Account Type name: " + accountType.getAccount_type_name());
+        System.out.println("Account Type successfully found, account_type_id: " + accountType.getAccountTypeId()
+                + " Account Type name: " + accountType.getAccountTypeName());
     }
 
     @Test(priority = 9, description = "Select an account with account_id=1")
@@ -229,7 +229,7 @@ public class DAOTest {
         AccountService accountService = new AccountService(mySQLFactory);
         System.out.println("DAOFactory successfully obtained: " + mySQLFactory);
         Account account = accountService.getAccount(1);
-        System.out.println("Account successfully found, account_type_id: " + account.getAccount_id()
+        System.out.println("Account successfully found, account_type_id: " + account.getAccountId()
                 + " Account balance: $" + account.getBalance());
     }
 
@@ -243,8 +243,8 @@ public class DAOTest {
         String newPassword = "NewPassword";
         customerService.updatePassword(customer, newPassword);
         Customer updatedCustomer = customerService.getCustomer(1);
-        Assert.assertEquals(updatedCustomer.getCustomer_id(), customer.getCustomer_id(), "Customer id must match");
-        Assert.assertEquals(updatedCustomer.getUser_name(), customer.getUser_name(), "User name must match");
+        Assert.assertEquals(updatedCustomer.getCustomerId(), customer.getCustomerId(), "Customer id must match");
+        Assert.assertEquals(updatedCustomer.getUserName(), customer.getUserName(), "User name must match");
         Assert.assertEquals(updatedCustomer.getPassword(), newPassword, "Password must match");
     }
 
@@ -257,10 +257,10 @@ public class DAOTest {
         Double newBalance = 80000.00;
         accountService.updateAccountBalance(account, newBalance);
         Account updatedAccount = accountService.getAccount(2);
-        System.out.println("Account successfully updated with account_id: " + ACCOUNT_2.getAccount_id()
+        System.out.println("Account successfully updated with account_id: " + ACCOUNT_2.getAccountId()
                 + " balance: $" + ACCOUNT_2.getBalance());
-        Assert.assertEquals(updatedAccount.getAccount_id(), ACCOUNT_2.getAccount_id(), "Account id must match");
-        Assert.assertEquals(updatedAccount.getUser_id(), ACCOUNT_2.getAccount_id(), "User id must match");
+        Assert.assertEquals(updatedAccount.getAccountId(), ACCOUNT_2.getAccountId(), "Account id must match");
+        Assert.assertEquals(updatedAccount.getUserId(), ACCOUNT_2.getAccountId(), "User id must match");
         Assert.assertEquals(updatedAccount.getBalance(), newBalance, "Balance must match");
     }
 
@@ -273,10 +273,10 @@ public class DAOTest {
         String newPhone = "3077018838";
         branchService.updateBranchPhone(branch, newPhone);
         Branch updatedBranch = branchService.getBranch(1);
-        System.out.println("Branch successfully updated with branch_id: " + BRANCH.getBranch_id()
+        System.out.println("Branch successfully updated with branch_id: " + BRANCH.getBranchId()
                 + " phone: " + BRANCH.getPhone());
-        Assert.assertEquals(updatedBranch.getBranch_id(), BRANCH.getBranch_id(), "Branch id must match");
-        Assert.assertEquals(updatedBranch.getBranch_name(), BRANCH.getBranch_name(), "Branch name must match");
+        Assert.assertEquals(updatedBranch.getBranchId(), BRANCH.getBranchId(), "Branch id must match");
+        Assert.assertEquals(updatedBranch.getBranchName(), BRANCH.getBranchName(), "Branch name must match");
         Assert.assertEquals(updatedBranch.getPhone(), newPhone, "Phone must match");
     }
 
@@ -290,7 +290,7 @@ public class DAOTest {
         accountService.deleteAccount(account);
         Account deletedAccount = accountService.getAccount(1);
         if (deletedAccount == null) {
-            System.out.println("Successfully deleted account with account_id: " + account.getAccount_id());
+            System.out.println("Successfully deleted account with account_id: " + account.getAccountId());
         }
     }
 
@@ -303,7 +303,7 @@ public class DAOTest {
         accountService.deleteAccount(account);
         Account deletedAccount = accountService.getAccount(2);
         if (deletedAccount == null) {
-            System.out.println("Successfully deleted account with account_id: " + account.getAccount_id());
+            System.out.println("Successfully deleted account with account_id: " + account.getAccountId());
         }
     }
 
@@ -316,7 +316,7 @@ public class DAOTest {
         customerService.deleteCustomer(customer);
         Customer deletedCustomer = customerService.getCustomer(1);
         if (deletedCustomer == null) {
-            System.out.println("Successfully deleted customer with customer_id: " + customer.getCustomer_id());
+            System.out.println("Successfully deleted customer with customer_id: " + customer.getCustomerId());
         }
     }
 
@@ -329,7 +329,7 @@ public class DAOTest {
         customerService.deleteCustomer(customer);
         Customer deletedCustomer = customerService.getCustomer(2);
         if (deletedCustomer == null) {
-            System.out.println("Successfully deleted customer with customer_id: " + customer.getCustomer_id());
+            System.out.println("Successfully deleted customer with customer_id: " + customer.getCustomerId());
         }
     }
 
@@ -343,7 +343,7 @@ public class DAOTest {
         AccountType deletedAccountType = accountTypeService.getAccountType(1);
         if (deletedAccountType == null) {
             System.out.println("Successfully deleted account type with account_type_id: "
-                    + accountType.getAccount_type_id());
+                    + accountType.getAccountTypeId());
         }
     }
 
@@ -356,7 +356,7 @@ public class DAOTest {
         branchService.deleteBranch(branch);
         Branch deletedBranch = branchService.getBranch(1);
         if (deletedBranch == null) {
-            System.out.println("Successfully deleted branch with branch_id: " + branch.getBranch_id());
+            System.out.println("Successfully deleted branch with branch_id: " + branch.getBranchId());
         }
     }
 }

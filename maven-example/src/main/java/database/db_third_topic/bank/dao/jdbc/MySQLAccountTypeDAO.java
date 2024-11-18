@@ -13,17 +13,17 @@ import database.db_third_topic.bank.model.AccountType;
 public class MySQLAccountTypeDAO implements AccountTypeDAO {
     @Override
     public void create(AccountType accountType) throws SQLException {
-        if (accountType.getAccount_type_id() != null) {
+        if (accountType.getAccountTypeId() != null) {
             throw new IllegalArgumentException("Account Type is already created, the account_type_id is not null.");
         }
-        Object[] values = {accountType.getAccount_type_name(), accountType.getInterest_rate()};
+        Object[] values = {accountType.getAccountTypeName(), accountType.getInterestRate()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement
                      = preparedStatement(connection, SQL_INSERT_ACCOUNT_TYPE, true, values)) {
             statement.executeUpdate();
             try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    accountType.setAccount_type_id(generatedKeys.getInt(1));
+                    accountType.setAccountTypeId(generatedKeys.getInt(1));
                     System.out.println("Successfully Inserted account_type_id " + generatedKeys.getInt(1));
                 } else {
                     throw new DAOException("Creating account type failed, no generated key obtained.");
@@ -72,7 +72,7 @@ public class MySQLAccountTypeDAO implements AccountTypeDAO {
 
     @Override
     public void deleteAccountType(AccountType accountType) throws SQLException {
-        Object[] values = {accountType.getAccount_type_id()};
+        Object[] values = {accountType.getAccountTypeId()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement = preparedStatement(connection, SQL_DELETE_ACCOUNT_TYPE,
                      false, values)) {
@@ -108,9 +108,9 @@ public class MySQLAccountTypeDAO implements AccountTypeDAO {
      */
     private AccountType getAccountTypeFromResultSet(ResultSet resultSet) throws SQLException {
         AccountType accountType = new AccountType();
-        accountType.setAccount_type_id(resultSet.getInt("account_type_id"));
-        accountType.setAccount_type_name(resultSet.getString("account_type_name"));
-        accountType.setInterest_rate(resultSet.getDouble("interest_rate"));
+        accountType.setAccountTypeId(resultSet.getInt("account_type_id"));
+        accountType.setAccountTypeName(resultSet.getString("account_type_name"));
+        accountType.setInterestRate(resultSet.getDouble("interest_rate"));
         return accountType;
     }
 }

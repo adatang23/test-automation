@@ -12,19 +12,19 @@ import database.db_third_topic.bank.model.Customer;
 public class MySQLCustomerDAO implements CustomerDAO {
     @Override
     public void create(Customer customer) throws SQLException {
-        if (customer.getCustomer_id() != null) {
+        if (customer.getCustomerId() != null) {
             throw new IllegalArgumentException("Customer is already created, the customer_id is not null.");
         }
-        Object[] values = {customer.getUser_name(), customer.getPassword(),
-                customer.getFirst_name(), customer.getLast_name(), customer.getPhone(),
-                customer.getEmail(), customer.getRegistration_date()};
+        Object[] values = {customer.getUserName(), customer.getPassword(),
+                customer.getFirstName(), customer.getLastName(), customer.getPhone(),
+                customer.getEmail(), customer.getRegistrationDate()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement
                      = preparedStatement(connection, SQL_INSERT_CUSTOMER, true, values)) {
             statement.executeUpdate();
             try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    customer.setCustomer_id(generatedKeys.getInt(1));
+                    customer.setCustomerId(generatedKeys.getInt(1));
                     System.out.println("Successfully Inserted customer_id " + generatedKeys.getInt(1));
                 } else {
                     throw new DAOException("Creating customer failed, no generated key obtained.");
@@ -38,10 +38,10 @@ public class MySQLCustomerDAO implements CustomerDAO {
 
     @Override
     public void updatePassword(Customer customer, String password) throws SQLException {
-        if (customer.getCustomer_id() == null) {
+        if (customer.getCustomerId() == null) {
             throw new IllegalArgumentException("Customer does not existed.");
         }
-        Object[] values = {password, customer.getCustomer_id()};
+        Object[] values = {password, customer.getCustomerId()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement
                      = preparedStatement(connection, SQL_UPDATE_CUSTOMER_PASSWORD, false, values)) {
@@ -89,7 +89,7 @@ public class MySQLCustomerDAO implements CustomerDAO {
 
     @Override
     public void deleteCustomer(Customer customer) throws SQLException {
-        Object[] values = {customer.getCustomer_id()};
+        Object[] values = {customer.getCustomerId()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement = preparedStatement(connection, SQL_DELETE_CUSTOMER,
                      false, values)) {
@@ -122,14 +122,14 @@ public class MySQLCustomerDAO implements CustomerDAO {
      */
     private Customer getCustomerFromResultSet(ResultSet resultSet) throws SQLException {
         Customer customer = new Customer();
-        customer.setCustomer_id(resultSet.getInt("customer_id"));
-        customer.setUser_name(resultSet.getString("user_name"));
+        customer.setCustomerId(resultSet.getInt("customer_id"));
+        customer.setUserName(resultSet.getString("user_name"));
         customer.setPassword(resultSet.getString("password"));
-        customer.setFirst_name(resultSet.getString("first_name"));
-        customer.setLast_name(resultSet.getString("last_name"));
+        customer.setFirstName(resultSet.getString("first_name"));
+        customer.setLastName(resultSet.getString("last_name"));
         customer.setPhone(resultSet.getString("phone"));
         customer.setEmail(resultSet.getString("email"));
-        customer.setRegistration_date(resultSet.getString("registration_date"));
+        customer.setRegistrationDate(resultSet.getString("registration_date"));
         return customer;
     }
 }

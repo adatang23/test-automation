@@ -10,17 +10,17 @@ public class Customer {
     private String email;
     private String registration_date;
 
-    public Integer getCustomer_id() {
+    public Integer getCustomerId() {
         return customer_id;
     }
 
-    public void setCustomer_id(Integer customer_id) {
+    public void setCustomerId(Integer customer_id) {
         this.customer_id = customer_id;
     }
 
-    public String getUser_name() { return user_name; }
+    public String getUserName() { return user_name; }
 
-    public void setUser_name(String user_name) {
+    public void setUserName(String user_name) {
         this.user_name = user_name;
     }
 
@@ -32,19 +32,19 @@ public class Customer {
         this.password = password;
     }
 
-    public String getFirst_name() {
+    public String getFirstName() {
         return first_name;
     }
 
-    public void setFirst_name(String first_name) {
+    public void setFirstName(String first_name) {
         this.first_name = first_name;
     }
 
-    public String getLast_name() {
+    public String getLastName() {
         return last_name;
     }
 
-    public void setLast_name(String last_name) {
+    public void setLastName(String last_name) {
         this.last_name = last_name;
     }
 
@@ -64,11 +64,11 @@ public class Customer {
         this.email = email;
     }
 
-    public String getRegistration_date() {
+    public String getRegistrationDate() {
         return registration_date;
     }
 
-    public void setRegistration_date(String registration_date) {
+    public void setRegistrationDate(String registration_date) {
         this.registration_date = registration_date;
     }
 

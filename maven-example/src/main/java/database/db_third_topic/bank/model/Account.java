@@ -8,35 +8,35 @@ public class Account {
     private Double balance;
     private Integer branch_id;
 
-    public Integer getAccount_id() {
+    public Integer getAccountId() {
         return account_id;
     }
 
-    public void setAccount_id(Integer account_id) {
+    public void setAccountId(Integer account_id) {
         this.account_id = account_id;
     }
 
-    public Integer getUser_id() {
+    public Integer getUserId() {
         return user_id;
     }
 
-    public void setUser_id(Integer user_id) {
+    public void setUserId(Integer user_id) {
         this.user_id = user_id;
     }
 
-    public String getAccount_opened() {
+    public String getAccountOpened() {
         return account_opened;
     }
 
-    public void setAccount_opened(String account_opened) {
+    public void setAccountOpened(String account_opened) {
         this.account_opened = account_opened;
     }
 
-    public Integer getType_id() {
+    public Integer getTypeId() {
         return type_id;
     }
 
-    public void setType_id(Integer type_id) {
+    public void setTypeId(Integer type_id) {
         this.type_id = type_id;
     }
 
@@ -48,11 +48,11 @@ public class Account {
         this.balance = balance;
     }
 
-    public Integer getBranch_id() {
+    public Integer getBranchId() {
         return branch_id;
     }
 
-    public void setBranch_id(Integer branch_id) {
+    public void setBranchId(Integer branch_id) {
         this.branch_id = branch_id;
     }
 }

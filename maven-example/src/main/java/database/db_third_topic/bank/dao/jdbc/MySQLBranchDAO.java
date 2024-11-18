@@ -13,17 +13,17 @@ import database.db_third_topic.bank.model.Branch;
 public class MySQLBranchDAO implements BranchDAO {
     @Override
     public void create(Branch branch) throws SQLException {
-        if (branch.getBranch_id() != null) {
+        if (branch.getBranchId() != null) {
             throw new IllegalArgumentException("Branch is already created, the branch_id is not null.");
         }
-        Object[] values = {branch.getBranch_name(), branch.getAddress(), branch.getPhone()};
+        Object[] values = {branch.getBranchName(), branch.getAddress(), branch.getPhone()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement
                      = preparedStatement(connection, SQL_INSERT_BRANCH, true, values)) {
             statement.executeUpdate();
             try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
-                    branch.setBranch_id(generatedKeys.getInt(1));
+                    branch.setBranchId(generatedKeys.getInt(1));
                     System.out.println("Successfully Inserted branch_id " + generatedKeys.getInt(1));
                 } else {
                     throw new DAOException("Creating branch failed, no generated key obtained.");
@@ -36,10 +36,10 @@ public class MySQLBranchDAO implements BranchDAO {
 
     @Override
     public void updateBranchPhone(Branch branch, String phone) throws SQLException {
-        if (branch.getBranch_id() == null) {
+        if (branch.getBranchId() == null) {
             throw new IllegalArgumentException("Branch does not existed.");
         }
-        Object[] values = {phone, branch.getBranch_id()};
+        Object[] values = {phone, branch.getBranchId()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement
                      = preparedStatement(connection, SQL_UPDATE_BRANCH_PHONE, false, values)) {
@@ -87,7 +87,7 @@ public class MySQLBranchDAO implements BranchDAO {
 
     @Override
     public void deleteBranch(Branch branch) throws SQLException {
-        Object[] values = {branch.getBranch_id()};
+        Object[] values = {branch.getBranchId()};
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement = preparedStatement(connection, SQL_DELETE_BRANCH,
                      false, values)) {
@@ -120,8 +120,8 @@ public class MySQLBranchDAO implements BranchDAO {
      */
     private Branch getBranchFromResultSet(ResultSet resultSet) throws SQLException {
         Branch branch = new Branch();
-        branch.setBranch_id(resultSet.getInt("branch_id"));
-        branch.setBranch_name(resultSet.getString("branch_name"));
+        branch.setBranchId(resultSet.getInt("branch_id"));
+        branch.setBranchName(resultSet.getString("branch_name"));
         branch.setAddress(resultSet.getString("address"));
         branch.setPhone(resultSet.getString("phone"));
         return branch;

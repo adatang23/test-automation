@@ -1,11 +1,13 @@
 package projects.fifth_topic.gui.components;
 
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
+import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+import projects.fifth_topic.gui.pages.desktop.HomePage;
 
-public class CreateAccountForm extends AbstractComponent {
+public class CreateAccountForm extends AbstractUIObject {
 
     @FindBy(xpath = "//span[@class='base']")
     private ExtendedWebElement createAccountTitle;
@@ -46,12 +48,17 @@ public class CreateAccountForm extends AbstractComponent {
     @FindBy(xpath = "//div[@id='password-confirmation-error']")
     private ExtendedWebElement confirmPasswordErrorMsg;
 
-    public CreateAccountForm(SearchContext searchContext, WebDriver driver) {
-        super(searchContext, driver);
+    public CreateAccountForm(WebDriver driver, SearchContext searchContext) {
+        super(driver, searchContext);
     }
 
     public boolean isCreateAccountTitlePresent() {
         return createAccountTitle.isDisplayed();
+    }
+
+    public String getCreateAccountTitleText(String formTitle) {
+        createAccountTitle.format(formTitle);
+        return createAccountTitle.getText();
     }
 
     public void inputCreateAccountFirstName(String firstName) {
@@ -108,23 +115,48 @@ public class CreateAccountForm extends AbstractComponent {
         return createAccountPasswordStrengthMsg.getText();
     }
 
-    public String createAccountFirstNameFailed() {
+    public String getCreateAccountFirstNameErrorMsg() {
         return firstNameErrorMsg.getText();
     }
 
-    public String createAccountLastNameFailed() {
+    public String getCreateAccountLastNameErrorMsg() {
         return lastNameErrorMsg.getText();
     }
 
-    public String createAccountEmailFailed() {
+    public String getCreateAccountEmailErrorMsg() {
         return emailErrorMsg.getText();
     }
 
-    public String createAccountPasswordFailed() {
+    public String getCreateAccountPasswordErrorMsg() {
         return passwordErrorMsg.getText();
     }
 
-    public String createAccountConfirmPasswordFailed() {
+    public String getCreateAccountConfirmPasswordErrorMsg() {
         return confirmPasswordErrorMsg.getText();
+    }
+
+    public boolean isCreateAccountFirstNameErrorMsgPresent() {
+        return firstNameErrorMsg.isDisplayed();
+    }
+
+    public boolean isCreateAccountLastNameErrorMsgPresent() {
+        return lastNameErrorMsg.isDisplayed();
+    }
+
+    public boolean isCreateAccountEmailErrorMsgPresent() {
+        return emailErrorMsg.isDisplayed();
+    }
+
+    public boolean isCreateAccountPasswordErrorMsgPresent() {
+        return passwordErrorMsg.isDisplayed();
+    }
+
+    public boolean isCreateAccountConfirmPasswordErrorMsgPresent() {
+        return confirmPasswordErrorMsg.isDisplayed();
+    }
+
+    public HomePage createAccountButtonClick() {
+        createAccountButton.click();
+        return new HomePage(getDriver());
     }
 }

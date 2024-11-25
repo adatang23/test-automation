@@ -2,6 +2,7 @@ package projects.fifth_topic.gui.components;
 
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
 import com.zebrunner.carina.webdriver.gui.AbstractPage;
+import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import org.apache.commons.lang3.NotImplementedException;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
@@ -9,9 +10,9 @@ import org.openqa.selenium.support.FindBy;
 import projects.fifth_topic.gui.pages.desktop.*;
 import projects.fifth_topic.enums.*;
 
-public class Header extends AbstractComponent {
+public class Header extends AbstractUIObject {
 
-    @FindBy(xpath = "//img[contains(@src, 'logo')]")
+    @FindBy(xpath = "//a[@class='logo']")
     private ExtendedWebElement logo;
 
     @FindBy(xpath = "//a[contains(text(), 'Sign In')]")
@@ -32,13 +33,32 @@ public class Header extends AbstractComponent {
     @FindBy(xpath = "//a[contains(text(), 'Sign Out')]")
     private ExtendedWebElement signOutHyperLink;
 
-    public Header(SearchContext searchContext, WebDriver driver) {
-        super(searchContext, driver);
+    @FindBy(id = "ui-id-3")
+    private ExtendedWebElement whatsNewButton;
+
+    @FindBy(id = "ui-id-4")
+    private ExtendedWebElement womenButton;
+
+    @FindBy(id = "ui-id-5")
+    private ExtendedWebElement menButton;
+
+    public Header(WebDriver driver, SearchContext searchContext) {
+        super(driver, searchContext);
     }
 
     public SignInPage clickSignInButton() {
         signInButton.click();
         return new SignInPage(getDriver());
+    }
+
+    public CreateAccountPage clickCreateAccountButton() {
+        createAccountButton.click();
+        return new CreateAccountPage(getDriver());
+    }
+
+    public WhatsNewPage clickWhatsNewButton() {
+        whatsNewButton.click();
+        return new WhatsNewPage(getDriver());
     }
 
     public String getUserName() {

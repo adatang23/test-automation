@@ -1,12 +1,13 @@
 package projects.fifth_topic.gui.components;
 
 import com.zebrunner.carina.webdriver.decorator.ExtendedWebElement;
+import com.zebrunner.carina.webdriver.gui.AbstractUIObject;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import projects.fifth_topic.gui.pages.desktop.*;
 
-public class SignInForm extends AbstractComponent {
+public class SignInForm extends AbstractUIObject {
 
     @FindBy(xpath = "//strong[@id='block-customer-login-heading']")
     private ExtendedWebElement signInFormTitle;
@@ -23,15 +24,15 @@ public class SignInForm extends AbstractComponent {
     @FindBy(xpath = "//div[@class='primary']")
     private ExtendedWebElement switchCreateAccountButton;
 
-    @FindBy()
+    @FindBy(xpath = "//div[@id='email-error']")
     private ExtendedWebElement emailErrorMsg;
 
-    @FindBy()
+    @FindBy(xpath = "//div[@id='pass-error']")
     private ExtendedWebElement passwordErrorMsg;
 
 
-    public SignInForm(SearchContext searchContext, WebDriver driver) {
-        super(searchContext, driver);
+    public SignInForm(WebDriver driver, SearchContext searchContext) {
+        super(driver, searchContext);
     }
 
     public boolean isSignInEmailPresent() {

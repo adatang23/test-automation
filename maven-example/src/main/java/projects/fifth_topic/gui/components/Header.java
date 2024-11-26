@@ -61,6 +61,16 @@ public class Header extends AbstractUIObject {
         return new WhatsNewPage(getDriver());
     }
 
+    public WomenPage clickWomenButton() {
+        womenButton.click();
+        return new WomenPage(getDriver());
+    }
+
+    public MenPage clickMenButton() {
+        menButton.click();
+        return new MenPage(getDriver());
+    }
+
     public String getUserName() {
         return userName.getText();
     }

@@ -9,7 +9,6 @@ import org.testng.asserts.SoftAssert;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class CarinaWebTest extends AbstractTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CarinaWebTest.class);
@@ -149,17 +148,46 @@ public class CarinaWebTest extends AbstractTest {
         names.add("Shorts");
         List<String> ItemsNames = whatsNewPage.getWhatsNewMainForm().getItemsNames();
         sa.assertEquals(ItemsNames, names, "The items' names are not same");
+        sa.assertAll();
     }
 
     @Test(priority = 9)
     @MethodOwner(owner = "stang")
     public void verifyWomenPagePresent() {
-
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        LOGGER.info("magento software testing board page is opened");
+        SoftAssert sa = new SoftAssert();
+        sa.assertTrue(homePage.isPageOpened(), "Page is not opened");
+        WomenPage womenPage = homePage.getHeaderMenu().clickWomenButton();
+        sa.assertTrue(womenPage.getWomenMainForm().isWomenMainFormTitlePresent(), "Women Main Form Title is not visible");
+        String womenMainFormTitle = womenPage.getWomenMainForm().getWomenMainFormTitleText(WOMEN_MAIN_FORM_TITLE);
+        sa.assertEquals(womenMainFormTitle, WOMEN_MAIN_FORM_TITLE, "Women Main Form Title does not match");
+        List<String> names = new ArrayList<>();
+        names.add("Tops");
+        names.add("Bottoms");
+        List<String> ItemsNames = womenPage.getWomenMainForm().getItemsNames();
+        sa.assertEquals(ItemsNames, names, "The items' names are not same");
+        sa.assertAll();
     }
 
     @Test(priority = 10)
     @MethodOwner(owner = "stang")
     public void verifyMenPagePresent() {
-
+        HomePage homePage = new HomePage(getDriver());
+        homePage.open();
+        LOGGER.info("magento software testing board page is opened");
+        SoftAssert sa = new SoftAssert();
+        sa.assertTrue(homePage.isPageOpened(), "Page is not opened");
+        MenPage menPage = homePage.getHeaderMenu().clickMenButton();
+        sa.assertTrue(menPage.getMenMainForm().isMenMainFormTitlePresent(), "Men Main Form Title is not visible");
+        String menMainFormTitle = menPage.getMenMainForm().getMenMainFormTitleText(MEN_MAIN_FORM_TITLE);
+        sa.assertEquals(menMainFormTitle, MEN_MAIN_FORM_TITLE, "Men Main Form Title does not match");
+        List<String> names = new ArrayList<>();
+        names.add("Tops");
+        names.add("Bottoms");
+        List<String> ItemsNames = menPage.getMenMainForm().getItemsNames();
+        sa.assertEquals(ItemsNames, names, "The items' names are not same");
+        sa.assertAll();
     }
 }

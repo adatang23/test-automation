@@ -10,148 +10,148 @@ import projects.fifth_topic.gui.pages.desktop.HomePage;
 public class CreateAccountForm extends AbstractUIObject {
 
     @FindBy(xpath = "//span[@class='base']")
-    private ExtendedWebElement createAccountTitle;
+    private ExtendedWebElement title;
 
-    @FindBy(xpath = "//input[@id='firstname']")
-    private ExtendedWebElement createAccountFirstNameField;
+    @FindBy(id = "firstname")
+    private ExtendedWebElement firstNameField;
 
-    @FindBy(xpath = "//input[@id='lastname']")
-    private ExtendedWebElement createAccountLastNameField;
+    @FindBy(id = "lastname")
+    private ExtendedWebElement lastNameField;
 
-    @FindBy(xpath = "//input[@id='email_address']")
-    private ExtendedWebElement createAccountEmailField;
+    @FindBy(id = "email_address")
+    private ExtendedWebElement emailField;
 
-    @FindBy(xpath = "//input[@id='password']")
-    private ExtendedWebElement createAccountPasswordField;
+    @FindBy(id = "password")
+    private ExtendedWebElement passwordField;
 
-    @FindBy(xpath = "//input[@id='password-confirmation']")
-    private ExtendedWebElement createAccountConfirmPasswordField;
+    @FindBy(id = "password-confirmation")
+    private ExtendedWebElement confirmPasswordField;
 
-    @FindBy(xpath = "//span[@id='password-strength-meter-label']")
-    private ExtendedWebElement createAccountPasswordStrengthMsg;
+    @FindBy(id = "password-strength-meter-label")
+    private ExtendedWebElement passwordStrengthMsg;
 
     @FindBy(xpath = "//button[@title='Create an Account']")
     private ExtendedWebElement createAccountButton;
 
-    @FindBy(xpath = "//div[@id='firstname-error']")
+    @FindBy(id = "firstname-error")
     private ExtendedWebElement firstNameErrorMsg;
 
-    @FindBy(xpath = "//div[@id='lastname-error']")
+    @FindBy(id = "lastname-error")
     private ExtendedWebElement lastNameErrorMsg;
 
-    @FindBy(xpath = "//div[@id='email_address-error']")
+    @FindBy(id = "email_address-error")
     private ExtendedWebElement emailErrorMsg;
 
-    @FindBy(xpath = "//div[@id='password-error']")
+    @FindBy(id = "password-error")
     private ExtendedWebElement passwordErrorMsg;
 
-    @FindBy(xpath = "//div[@id='password-confirmation-error']")
+    @FindBy(id = "password-confirmation-error")
     private ExtendedWebElement confirmPasswordErrorMsg;
 
     public CreateAccountForm(WebDriver driver, SearchContext searchContext) {
         super(driver, searchContext);
     }
 
-    public boolean isCreateAccountTitlePresent() {
-        return createAccountTitle.isDisplayed();
+    public boolean isTitlePresent() {
+        return title.isDisplayed();
     }
 
-    public String getCreateAccountTitleText(String formTitle) {
-        createAccountTitle.format(formTitle);
-        return createAccountTitle.getText();
+    public String getTitleText(String formTitle) {
+        title.format(formTitle);
+        return title.getText();
     }
 
-    public void inputCreateAccountFirstName(String firstName) {
-        if (isCreateAccountEmailPresent()) {
-            createAccountEmailField.type(firstName);
+    public void inputFirstName(String firstName) {
+        if (isEmailPresent()) {
+            emailField.type(firstName);
         }
     }
 
-    public boolean isCreateAccountFirstNamePresent() {
-        return createAccountFirstNameField.isDisplayed();
+    public boolean isFirstNamePresent() {
+        return firstNameField.isDisplayed();
     }
 
-    public void inputCreateAccountLastName(String lastName) {
-        if (isCreateAccountLastNamePresent()) {
-            createAccountLastNameField.type(lastName);
+    public void inputLastName(String lastName) {
+        if (isLastNamePresent()) {
+            lastNameField.type(lastName);
         }
     }
 
-    public boolean isCreateAccountLastNamePresent() {
-        return createAccountLastNameField.isDisplayed();
+    public boolean isLastNamePresent() {
+        return lastNameField.isDisplayed();
     }
 
-    public void inputCreateAccountEmail(String email) {
-        if (isCreateAccountEmailPresent()) {
-            createAccountEmailField.type(email);
+    public void inputEmail(String email) {
+        if (isEmailPresent()) {
+            emailField.type(email);
         }
     }
 
-    public boolean isCreateAccountEmailPresent() {
-        return createAccountEmailField.isDisplayed();
+    public boolean isEmailPresent() {
+        return emailField.isDisplayed();
     }
 
-    public void inputCreateAccountPassword(String password) {
-        if (isCreateAccountPasswordPresent()) {
-            createAccountPasswordField.type(password);
+    public void inputPassword(String password) {
+        if (isPasswordPresent()) {
+            passwordField.type(password);
         }
     }
 
-    public boolean isCreateAccountPasswordPresent() {
-        return createAccountPasswordField.isDisplayed();
+    public boolean isPasswordPresent() {
+        return passwordField.isDisplayed();
     }
 
-    public void inputCreateAccountConfirmPassword(String confirmPassword) {
-        if (isCreateAccountConfirmPasswordPresent()) {
-            createAccountConfirmPasswordField.type(confirmPassword);
+    public void inputConfirmPassword(String confirmPassword) {
+        if (isConfirmPasswordPresent()) {
+            confirmPasswordField.type(confirmPassword);
         }
     }
 
-    public boolean isCreateAccountConfirmPasswordPresent() {
-        return createAccountConfirmPasswordField.isDisplayed();
+    public boolean isConfirmPasswordPresent() {
+        return confirmPasswordField.isDisplayed();
     }
 
     public String getPasswordStrength() {
-        return createAccountPasswordStrengthMsg.getText();
+        return passwordStrengthMsg.getText();
     }
 
-    public String getCreateAccountFirstNameErrorMsg() {
+    public String getFirstNameErrorMsg() {
         return firstNameErrorMsg.getText();
     }
 
-    public String getCreateAccountLastNameErrorMsg() {
+    public String getLastNameErrorMsg() {
         return lastNameErrorMsg.getText();
     }
 
-    public String getCreateAccountEmailErrorMsg() {
+    public String getEmailErrorMsg() {
         return emailErrorMsg.getText();
     }
 
-    public String getCreateAccountPasswordErrorMsg() {
+    public String getPasswordErrorMsg() {
         return passwordErrorMsg.getText();
     }
 
-    public String getCreateAccountConfirmPasswordErrorMsg() {
+    public String getConfirmPasswordErrorMsg() {
         return confirmPasswordErrorMsg.getText();
     }
 
-    public boolean isCreateAccountFirstNameErrorMsgPresent() {
+    public boolean isFirstNameErrorMsgPresent() {
         return firstNameErrorMsg.isDisplayed();
     }
 
-    public boolean isCreateAccountLastNameErrorMsgPresent() {
+    public boolean isLastNameErrorMsgPresent() {
         return lastNameErrorMsg.isDisplayed();
     }
 
-    public boolean isCreateAccountEmailErrorMsgPresent() {
+    public boolean isEmailErrorMsgPresent() {
         return emailErrorMsg.isDisplayed();
     }
 
-    public boolean isCreateAccountPasswordErrorMsgPresent() {
+    public boolean isPasswordErrorMsgPresent() {
         return passwordErrorMsg.isDisplayed();
     }
 
-    public boolean isCreateAccountConfirmPasswordErrorMsgPresent() {
+    public boolean isConfirmPasswordErrorMsgPresent() {
         return confirmPasswordErrorMsg.isDisplayed();
     }
 
